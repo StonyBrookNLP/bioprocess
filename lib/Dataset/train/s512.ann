@@ -1,4 +1,0 @@
-T1	Event 54 58	turn
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 64 69	gases
-T102	Entity 36 43	liquids

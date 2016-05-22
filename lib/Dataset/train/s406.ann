@@ -1,5 +1,0 @@
-T1	Event 0 14	photosynthesis
-E1	Event:T1 raw-material:T101 result:T102 agent:T103
-T101	Entity 73 86	light photons
-T102	Entity 122 137	chemical energy
-T103	Entity 27 64	pigments , molecules in the plant cell

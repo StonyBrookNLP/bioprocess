@@ -1,3 +1,0 @@
-T1	Event 32 39	produce
-E1	Event:T1 result:T101
-T101	Entity 32 71	produce heat which is radiated from the

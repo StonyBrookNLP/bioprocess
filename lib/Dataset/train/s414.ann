@@ -1,4 +1,0 @@
-T1	Event 41 46	turns
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 52 67	an adult animal
-T102	Entity 32 40	a zygote

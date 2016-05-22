@@ -1,4 +1,0 @@
-T1	Event 30 40	converting
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 62 75	gaseous phase
-T102	Entity 41 46	water

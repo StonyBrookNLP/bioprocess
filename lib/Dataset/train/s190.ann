@@ -1,4 +1,0 @@
-T1	Event 49 54	turns
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 60 72	liquid water
-T102	Entity 37 48	water vapor

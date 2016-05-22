@@ -1,4 +1,0 @@
-T1	Event 46 53	divides
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 59 77	two daughter cells
-T102	Entity 32 45	a single cell

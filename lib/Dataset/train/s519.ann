@@ -1,4 +1,0 @@
-T1	Event 53 59	broken
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 65 74	molecules
-T102	Entity 34 48	chunks of food
