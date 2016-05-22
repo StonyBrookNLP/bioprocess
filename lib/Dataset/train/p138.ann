@@ -1,0 +1,38 @@
+T1	Event 97 101	move
+E1	Event:T1 cotemporal:E5 agent:T7 agent2:T8 none:T23 none:T24 none:T25 none:T26
+T2	Event 207 212	leave
+E2	Event:T2 next-event:E5 agent:T9 theme:T10 location:T11 time:T12
+T3	Event 288 299	transcribed
+E3	Event:T3 causes:E2 theme:T13 result:T14 none:T27
+T4	Event 398 407	converted
+E4	Event:T4 super-event:E5 next-event:E6 raw-material:T16 result:T17 agent:T18 none:T28 none:T29
+T5	Event 344 350	insert
+E5	Event:T5 location:T15 agent:T16
+T6	Event 661 670	catalyzes
+E6	Event:T6 agent:T20 theme:T21 location:T22
+T7	Entity 73 89	retrotransposons
+T8	Entity 114 181	an RNA intermediate that is a transcript of the retrotransposon DNA
+T9	Entity 183 199	Retrotransposons
+T10	Entity 213 219	a copy
+T11	Entity 223 240	the original site
+T12	Entity 248 261	transposition
+T13	Entity 269 273	they
+*	same-entity T13 T9
+T14	Entity 305 324	an RNA intermediate
+T15	Entity 354 366	another site
+T16	Entity 368 388	the RNA intermediate
+T17	Entity 416 419	DNA
+T18	Entity 423 444	reverse transcriptase
+T19	Entity 446 486	an enzyme encoded by the retrotransposon
+*	same-entity T18 T19
+T20	Entity 637 660	Another cellular enzyme
+T21	Entity 671 711	insertion of the reverse-transcribed DNA
+T22	Entity 715 725	a new site
+*	same-entity T14 T16
+T23	Entity 0 26	Most transposable elements
+T24	Entity 30 48	eukaryotic genomes
+T25	Entity 56 71	the second type
+T26	Entity 105 110	means
+T27	Entity 326 338	Figure 21.10
+T28	Entity 446 455	an enzyme
+T29	Entity 467 486	the retrotransposon

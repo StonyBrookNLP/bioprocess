@@ -1,0 +1,4 @@
+T1	Event 33 43	converting
+E1	Event:T1 raw-material:T101 agent:T102
+T101	Entity 79 94	chemical energy
+T102	Entity 44 62	inorganic material

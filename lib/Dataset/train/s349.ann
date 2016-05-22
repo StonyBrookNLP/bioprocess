@@ -1,0 +1,4 @@
+T1	Event 54 58	grow
+E1	Event:T1 raw-material:T101 agent:T102
+T101	Entity 99 108	the light
+T102	Entity 31 53	plants on a windowsill

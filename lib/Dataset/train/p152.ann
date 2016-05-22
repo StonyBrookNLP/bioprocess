@@ -1,0 +1,4 @@
+T1	Event 46 50	grow towards
+E1	Event:T1 agent:T3 destination:T2
+T2	Entity 59 73	a light source
+T3	Entity 39 45	plants

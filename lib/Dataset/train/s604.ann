@@ -1,0 +1,4 @@
+T1	Event 46 50	turn
+E1	Event:T1 raw-material:T101 result:T102
+T101	Entity 51 63	light energy
+T102	Entity 69 84	chemical energy
