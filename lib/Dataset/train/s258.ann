@@ -1,0 +1,4 @@
+T1	Event 40 53	breaking down
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 62 84	into smaller fragments
+T102	Entity 54 61	bedrock

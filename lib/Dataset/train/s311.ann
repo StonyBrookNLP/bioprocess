@@ -1,0 +1,3 @@
+T1	Event 30 42	transferring
+E1	Event:T1 agent:T101
+T101	Entity 43 79	pollen from anther  male flower part

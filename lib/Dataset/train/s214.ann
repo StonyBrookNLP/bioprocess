@@ -1,0 +1,3 @@
+T1	Event 0 7	melting
+E1	Event:T1 raw-material:T101
+T101	Entity 21 25	heat

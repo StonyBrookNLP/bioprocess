@@ -1,0 +1,4 @@
+T1	Event 26 32	making
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 33 53	normal diploid cells
+T102	Entity 33 53	normal diploid cells

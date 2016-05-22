@@ -1,0 +1,4 @@
+T1	Event 38 45	burning
+E1	Event:T1 raw-material:T101 agent:T102
+T101	Entity 89 108	the primary oxidant
+T102	Entity 46 52	a fuel
