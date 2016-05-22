@@ -1,3 +1,0 @@
-T1	Event 0 7	mitosis
-E1	Event:T1 result:T101
-T101	Entity 15 44	the number of cells to double .

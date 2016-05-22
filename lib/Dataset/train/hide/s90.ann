@@ -1,4 +1,0 @@
-T1	Event 28 40	transporting
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 113 127	carbon dioxide
-T102	Entity 73 81	the body

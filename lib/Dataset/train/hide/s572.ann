@@ -1,4 +1,0 @@
-T1	Event 47 54	divides
-E1	Event:T1 result:T101 agent:T102
-T101	Entity 60 63	two
-T102	Entity 32 46	a cell nucleus
