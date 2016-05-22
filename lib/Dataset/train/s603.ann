@@ -1,0 +1,3 @@
+T1	Event 30 37	turning
+E1	Event:T1 agent:T101
+T101	Entity 38 46	a liquid

@@ -1,0 +1,4 @@
+T1	Event 31 38	turning
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 39 51	into a vapor
+T102	Entity 70 79	your pond

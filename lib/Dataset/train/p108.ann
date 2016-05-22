@@ -1,0 +1,29 @@
+T1	Event 25 33	interact
+E1	Event:T1 causes:E2 agent:T6 theme:T7 none:T13
+T2	Event 81 89	contract
+E2	Event:T2 same-event:E3 agent:T8 none:T14
+T3	Event 95 106	contraction
+E3	Event:T3 next-event:E4 agent:T9 none:T15 none:T16 none:T17
+T4	Event 210 217	deepens
+E4	Event:T4 causes:E5 agent:T10
+T5	Event 243 250	pinched
+E5	Event:T5 theme:T11 result:T12 none:T18 none:T19 none:T20 none:T21 none:T22 none:T23
+T6	Entity 0 24	The actin microfilaments
+T7	Entity 39 59	the myosin molecules
+T8	Entity 69 77	the ring
+T9	Entity 110 152	the dividing cell's ring of microfilaments
+*	same-entity T8 T6 T9
+T10	Entity 190 209	The cleavage furrow
+T11	Entity 224 239	the parent cell
+T12	Entity 269 299	two completely separated cells
+T13	Entity 25 33	interact
+T14	Entity 81 89	contract
+T15	Entity 91 106	The contraction
+T16	Entity 161 172	the pulling
+T17	Entity 176 188	a drawstring
+T18	Entity 254 257	two
+T19	Entity 301 305	each
+T20	Entity 311 336	its own nucleus and share
+T21	Entity 340 347	cytosol
+T22	Entity 349 359	organelles
+T23	Entity 365 393	other subcellular structures

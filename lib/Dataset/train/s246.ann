@@ -1,0 +1,4 @@
+T1	Event 46 53	convert
+E1	Event:T1 raw-material:T101 result:T102
+T101	Entity 54 62	sunlight
+T102	Entity 68 81	usable energy

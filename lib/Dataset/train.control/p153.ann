@@ -1,0 +1,9 @@
+T1	Event 49 57	dissolve
+E1	Event:T1 agent:T3 location:T5
+T2	Event 124 132	transfer
+E2	Event:T2 theme:T6 location:T7 agent:T4
+T3	Entity 23 36	fat particles
+T5	Entity 61 66	water
+T4	Entity 114 118	they
+T6	Entity 133 137	heat
+T7	Entity 148 154	medium

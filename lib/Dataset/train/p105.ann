@@ -1,0 +1,32 @@
+T1	Event 154 162	persists
+E1	Event:T1 cotemporal:E6 agent:T12 location:T13 none:T16 none:T17
+T2	Event 223 234	associating
+E2	Event:T2 agent:T14 theme:T15 none:T18 none:T19 none:T20 none:T21
+T3	Event 27 33	switch
+E3	Event:T3 next-event:E1 agent:T7 theme:T8 none:T22
+T4	Event 48 58	initiating
+E4	Event:T4 causes:E5 super-event:E3 theme:T9 agent:T7
+T5	Event 87 98	destruction
+E5	Event:T5 agent:T9 theme:T10 none:T23
+T6	Static-Event 176 184	inactive
+E6	Static-Event:T6 next-event:E2 agent:T12 none:T24 none:T25
+T7	Entity 17 20	MPF
+T8	Entity 34 40	itself
+T9	Entity 59 68	a process
+T10	Entity 102 116	its own cyclin
+T11	Entity 118 143	The noncyclin part of MPF
+T12	Entity 145 152	the Cdk
+*	same-entity T11 T12 T14
+T13	Entity 166 174	the cell
+T14	Entity 191 193	it
+T15	Entity 240 260	new cyclin molecules
+T16	Entity 118 136	The noncyclin part
+T17	Entity 140 143	MPF
+T18	Entity 210 213	MPF
+T19	Entity 280 299	the S and G2 phases
+T20	Entity 303 317	the next round
+T21	Entity 321 330	the cycle
+T22	Entity 7 15	anaphase
+T23	Entity 83 98	the destruction
+T24	Entity 176 184	inactive
+T25	Entity 202 206	part

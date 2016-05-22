@@ -1,0 +1,5 @@
+T1	Event 0 11	evaporation
+E1	Event:T1 raw-material:T101 result:T102 agent:T103
+T101	Entity 24 41	heat from the sun
+T102	Entity 74 98	to turn into water vapor
+T103	Entity 49 54	water

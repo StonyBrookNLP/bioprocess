@@ -1,0 +1,4 @@
+T1	Event 0 11	evaporation
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 49 54	a gas
+T102	Entity 24 32	a liquid

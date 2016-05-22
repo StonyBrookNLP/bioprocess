@@ -1,0 +1,4 @@
+T1	Event 25 32	protect
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 25 52	protect fish from predators
+T102	Entity 33 37	fish

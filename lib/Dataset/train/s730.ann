@@ -1,0 +1,3 @@
+T1	Event 0 16	seed germination
+E1	Event:T1 raw-material:T101
+T101	Entity 58 73	being moistened

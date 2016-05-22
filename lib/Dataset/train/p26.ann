@@ -1,0 +1,18 @@
+T1	Entity 13 71	a transgene for a human blood protein such as antithrombin
+T2	Entity 206 217	The protein
+T3	Event 226 234	purified
+E1	Event:T3 location:T4 theme:T2 none:T10 none:T11
+T4	Entity 240 248	the milk
+T5	Event 79 87	inserted
+E2	Event:T5 theme:T1 next-event:E3 destination:T6 none:T12
+T6	Entity 93 113	the genome of a goat
+T7	Event 160 168	secreted
+E3	Event:T7 location:T9 theme:T8 next-event:E1 none:T13 none:T14
+T8	Entity 133 156	the transgene's product
+T9	Entity 172 189	the animal's milk
+*	same-entity T8 T2
+T10	Entity 271 283	purification
+T11	Entity 289 303	a cell culture
+T12	Entity 4 11	example
+T13	Entity 117 127	such a way
+T14	Entity 191 203	Figure 20.24

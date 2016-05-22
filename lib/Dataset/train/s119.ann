@@ -1,0 +1,4 @@
+T1	Event 131 139	oxidized
+E1	Event:T1 result:T101 agent:T102
+T101	Entity 151 157	carbon
+T102	Entity 99 126	glucose and other compounds

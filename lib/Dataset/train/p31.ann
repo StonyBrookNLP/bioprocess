@@ -1,0 +1,27 @@
+T1	Entity 16 33	RNA polymerase II
+T2	Event 34 45	transcribes
+E1	Event:T2 agent:T1 theme:T3 next-event:E3 none:T15 none:T16 none:T17 none:T18 none:T19
+T3	Entity 46 67	a sequence on the DNA
+T6	Entity 188 253	a point about 10-35 nucleotides downstream from the AAUAAA signal
+T7	Entity 255 306	proteins associated with the growing RNA transcript
+T8	Event 307 310	cut
+E3	Event:T8 agent:T7 location:T6 causes:E4 theme:T13
+T9	Event 340 349	releasing
+E4	Event:T9 theme:T10 next-event:E5 none:T20
+T10	Entity 350 362	the pre-mRNA
+T11	Event 392 402	processing
+E5	Event:T11 theme:T12 none:T21 none:T22 none:T23
+T12	Entity 364 376	The pre-mRNA
+*	same-entity T10 T12
+T13	Entity 311 313	it
+T14	Entity 75 110	the polyadenylation signal sequence
+*	same-entity T3 T14
+T15	Entity 4 14	eukaryotes
+T16	Entity 75 110	the polyadenylation signal sequence
+T17	Entity 128 145	a polyadenylation
+T18	Entity 153 161	(AAUAAA)
+T19	Entity 165 177	the pre-mRNA
+T20	Entity 324 338	the polymerase
+T21	Entity 392 402	processing
+T22	Entity 404 413	the topic
+T23	Entity 417 433	the next section
