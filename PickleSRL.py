@@ -1,15 +1,23 @@
 #!/usr/bin/jython
 
+from __future__ import division
+from __future__ import print_function
 import os
-wd = '/home/dick/srl/goto'
-os.chdir(wd)
+import pickle
 from java.lang import System
 from os.path import join
+import argparse
+import sys
+
+wd = '/home/dick/srl/goto'
+os.chdir(wd)
 System.setProperty("user.dir", os.getcwd())
-
-import pickle
-import classPathHacker
-
+parser = argparse.ArgumentParser()
+group = parser.add_mutually_exclusive_group()
+choices = ['Agent','Origin','Destination','Location','Result','RawMaterial','Theme','Time']
+group.add_argument('-a', '--useArgid', action='store', choices=choices)
+group.add_argument('-b', '--useBinarize', action='store_true')
+args = parser.parse_args()
 # peterbe.com
 def f7(seq):
     seen = set()
@@ -70,16 +78,27 @@ main = Main()
 from java.util import HashMap
 from java.util import List
 from fig.exec import Execution
-Execution.init('-datasetDir lib/Dataset -useArgid -execPoolDir state/execs -mode srl -runOn dev -runModel global'.split(), 'Main', main)
+
+useArgid = ' -useArgid ' + args.useArgid + ' ' if args.useArgid else ''
+useBinarize = ' -useBinarize ' if args.useBinarize else ''
+Execution.init('-datasetDir lib/Dataset {}{}-execPoolDir state/execs -mode init -runOn dev -runModel global'.format(useBinarize, useArgid).split(), 'Main', main)
+# need to get ParamOne initialized
+main.run()
 hmap = HashMap()
 for subdir in ['train', 'test', 'sample']:
     hmap.put(subdir, join(wd, 'lib/Dataset', subdir) + '/')
-# misses ParamOne
-#listbio = main.runSRLPrediction(hmap)
-listbio = main.run()
-pickleMe = [{ 'exampleID': d.exampleID, 'rankedRoleProbs':[(x.first(), x.second()) for x in d.rankedRoleProbs] , 'features': {y[0]:y[1] for y in [x.split('=') for x in d.features.getFeatures()]}, 'bestRoleIndex': d.bestRoleIndex, 'entityNode': d.entityNode.toString(), 'eventNode': d.eventNode.toString(), 'guessRole': d.guessRole, 'role': d.role(), 'sentence': d.sentence.toString(), 'word': d.word  } for d in listbio if d.role() != 'NONE']
-print 'Pickling %d biodatums' % len(pickleMe)
-with open(join(wd, 'lib/Dataset/train.p'), 'wb') as fp:
+listbio = main.runSRLPrediction(hmap)
+
+pickleMe = [{ 'exampleID': d.exampleID, 'rankedRoleProbs':[(x.first(), x.second()) for x in d.rankedRoleProbs] , 'features': {y[0]:y[1] for y in [x.split('=') for x in d.features.getFeatures()]}, 'bestRoleIndex': d.bestRoleIndex, 'entityNode': d.entityNode.toString(), 'eventNode': d.eventNode.toString(), 'guessRole': d.guessRole, 'role': d.role(), 'sentence': d.sentence.toString(), 'word': d.word  } for d in listbio if d.role() != 'NONE' or d.guessRole != 'NONE']
+
+print('Pickling %d biodatums' % len(pickleMe))
+print('Throwing out %d NONE-NONEs' % (len(listbio) - len(pickleMe)))
+fn = 'lin'
+if (args.useArgid):
+    fn = args.useArgid
+if (args.useBinarize):
+    fn = 'log'
+with open(join(wd, 'lib/Dataset', fn + '.p'), 'wb') as fp:
     pickle.dump(pickleMe, fp)
     fp.close()
 Execution.finish()

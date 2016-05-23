@@ -182,24 +182,27 @@ public class SRLPredictionInferer extends Inferer {
 						}
 					//List<BioDatum> testDataWithLabel = new ArrayList<BioDatum>();
 
-					boolean argid =  ParamOne.getInstance().getb("useArgid");
-
 					LinearClassifier<String, String> lincls = new LinearClassifier<String, String>(parameters.weights, parameters.featureIndex, parameters.labelIndex);
 					String [] classes = { parameters.labelIndex.get(0), parameters.labelIndex.get(1) };
 					LogisticClassifier<String, String> logcls = new LogisticClassifier<String, String>(parameters.weights[1], parameters.featureIndex, classes);
 
+					String argid =  ParamOne.getInstance().gets("useArgid");
+					boolean binarize = ParamOne.getInstance().getb("useBinarize");
 					for(BioDatum d : testDataEvent) {
 						String role = d.role();
-						if (argid) {
-							if (role != "NONE")
+						if (binarize) {
+							if (role != ArgumentRelation.RelationType.NONE.toString())
 								role = ArgumentRelation.RelationType.Agent.toString();
+						}
+						if (argid != null && !role.equals(argid)) {
+							role = ArgumentRelation.RelationType.NONE.toString();
 						}
 						Datum<String, String> newDatum = new BasicDatum<String, String>(d.getFeatures(),role);
 						//d.setPredictedLabel(classifier.classOf(newDatum));
 						//double scoreE = classifier.scoreOf(newDatum, "E"), scoreO = classifier.scoreOf(newDatum, "O");
 						//d.setProbability(Math.exp(scoreE)/(Math.exp(scoreE) + Math.exp(scoreO)));
 						Counter<String> probSRL = new ClassicCounter<String>();
-						if (argid) {
+						if (argid != null) {
 							double probOf = logcls.probabilityOf(newDatum);
 							probSRL.setCount(role, probOf);
 							String other = parameters.labelIndex.get(Math.abs(parameters.labelIndex.indexOf(role) - 1));

@@ -37,18 +37,26 @@ public class Learner {
      */
     public Params learn(List<Example> dataset, FeatureExtractor ff) {
         List<BioDatum> data = ff.setFeaturesTrain(dataset);
-        boolean argid = ParamOne.getInstance().getb("useArgid");
+        String argid = ParamOne.getInstance().gets("useArgid");
+        boolean binarize = ParamOne.getInstance().getb("useBinarize");
 
         GeneralDataset<String, String> dd = new Dataset<String, String>();
         for (BioDatum d : data) {
             String role = d.role();
-            if (argid) {
+            if (binarize) {
                 if (role != "NONE")
                     role = ArgumentRelation.RelationType.Agent.toString();
             }
-            dd.add(new BasicDatum<String, String>(d.features.getFeatures(), role));
+            if (argid == null)
+                dd.add(new BasicDatum<String, String>(d.features.getFeatures(), role));
+            else {
+                if (role.equals(argid))
+                    dd.add(new BasicDatum<String, String>(d.features.getFeatures(), role));
+                else
+                    dd.add(new BasicDatum<String, String>(d.features.getFeatures(), "NONE"));
+            }
         }
-        if (argid) {
+        if (argid != null) {
             LogisticClassifierFactory<String, String> lcFactory = new LogisticClassifierFactory<String, String>();
             LogisticClassifier<String, String> classifier = lcFactory.trainClassifier(dd);
             double [][] weights = { classifier.getWeights().clone(), classifier.getWeights().clone() } ;

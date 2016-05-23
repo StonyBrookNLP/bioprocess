@@ -72,7 +72,8 @@ public class Main implements Runnable {
 	@Option(gloss="Should we include lexical features?") public boolean useLexicalFeatures = true;
 	@Option(gloss="Run on dev or test") public String runOn;
 	@Option(gloss="Model to run") public String runModel;
-    @Option(gloss="Argid") public boolean useArgid = false;
+	@Option(gloss="Binarize") public boolean useBinarize;
+    @Option(gloss="Logistic for role") public String useArgid = null;
 
 	public void runPrediction(HashMap<String, String> groups, FeatureExtractor featureFactory, Learner learner, Inferer inferer, Scorer scorer) {
 		int NumCrossValidation = 10;
@@ -194,7 +195,8 @@ public class Main implements Runnable {
 	@Override
 	public void run() {
         ParamOne.getInstance().putb("useLexicalFeatures", useLexicalFeatures);
-        ParamOne.getInstance().putb("useArgid", useArgid);
+        ParamOne.getInstance().puts("useArgid", useArgid);
+		ParamOne.getInstance().putb("useBinarize", useBinarize);
 		LogInfo.begin_track("main");
 		String trainDirectory = datasetDir+"/train/";
 		String testDirectory = datasetDir+"/test/";
@@ -441,7 +443,9 @@ public class Main implements Runnable {
 				//featureFactory = new SRLFeatureFactory(param.labelIndex);
 				List<BioDatum> predicted = inferer.Infer(split.GetTestExamples(i), param, featureFactory);
 				Triple<Double, Double, Double> triple = Scorer.scoreSRL(split.GetTestExamples(i), predicted);
-				precisionBaseline[i-1] = triple.first; recallBaseline[i-1] = triple.second; f1Baseline[i-1] = triple.third;
+				precisionBaseline[i-1] = triple.first;
+				recallBaseline[i-1] = triple.second;
+				f1Baseline[i-1] = triple.third;
 				LogInfo.end_track();
                 result.addAll(predicted);
 				//break;
