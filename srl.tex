@@ -1,0 +1,149 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips15submit_e,times,bm,float,color,soul,hhline,siunitx,booktabs}
+\usepackage[backend=biber, citestyle=authoryear-comp]{biblatex}
+\usepackage{hyperref,csquotes}
+\usepackage{fp,siunitx,amsfonts,amsmath,amssymb,graphicx,url,subfig,float,bm}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage[mathscr]{euscript}
+\usepackage{mathtools}
+\usepackage{grffile}
+\usepackage{amsthm}
+\usepackage{marvosym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{url}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
+
+
+\title{Preliminary Report on AKBC For Natural Processes}
+\author{
+Dick~Chiang\thanks{Submitting for partial satisfaction of the requirements of CSE523}\\
+Department of Computer Science\\
+Stony Brook University\\
+Stony Brook, NY 11790 \\
+\texttt{rchiang@cs.stonybrook.edu} \\
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\def\func#1{\textrm{\bf{\sc{#1}}}}
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\newcommand{\fatrule}{\specialrule{2\heavyrulewidth}{\aboverulesep}{1.2\belowrulesep}}
+\nipsfinalcopy % Uncomment for camera-ready version
+
+\addbibresource{/home/dick/srl/report.bib}
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We envision an automatic knowledge base construction (AKBC) system geared towards facts regarding natural processes, and whose primary performance metric shall be its ability to answer grade school science questions.  Our system relies on a semantic role labeller capable of identifying those parts of sentences corresponding to process roles, e.g., ``undergoer'', ``medium.''  This discriminative capability enables search agents to traverse the internet and collect semantically rich sentences chosen for relevance and role coverage.  This short report describes the current state of the research and offers some simple technical thoughts for increased collaboration and reproducibility of results.
+\end{abstract}
+
+\section{System Synopsis}
+A semantic role labelling (SRL) system extracts roles from acquired sentences.  An integer linear programmer (ILP) then integrates these new relationships into the existing graph, resolving potential contradictions via an objective function maximizing role likelihood and lexical consistency.  For example, the noun phrase ``the water droplets'' may score highest for the role {\it result} for condensation but may appear in previous sentences as {\it undergoer}, say for evaporation.   The ILP attempts to find the best role in light of these soft global constraints as well as hard local constraints such as the forbidding of repeated roles within a sentence.  New extensions to the semantic graph are then translated into Google queries, and the iterative acquisition proceeds.
+
+While the exact details of the actual inferential mechanism remain unclear, a minimum requirement for a question answering system is a semantic graph on which to map candidate queries.  To first order, the process represents a verbal predicate.  A directed graph is constructed for each such process whose vertices are argument instances or, less formally, roles.  For the process {\it evaporation}, the argument instances could be {\it perspiration} (undergoer), {\it wind} (enabler), and {\it cooling} (result).  Thus, regardless of which inferential mechanism we choose---whether classical first-order inference or graphical methods---SRL is of paramount importance.
+
+\section{An Argument For Higher Recall}
+\cite{sl} reported a best precision/recall of 0.5614/0.3351 for the SRL task on a set of 758 process related sentences.  Existing SRL systems appear to perform well on argument classification but poorly on argument identification.  That is, given a set of process-specific sentences for which a human annotator has identified arguments fulfilling key roles, the SRL system often does select the same role as the human but only if the span is first identified as a predicate argument.  In most cases the relevant span is not labelled at all, resulting in the subpar recall score.  This is a weakness of SRL systems which combine the argument classification and identification tasks.
+
+For the present task, unfortunately, argument identification is more important than argument classification.  \cite{bala} notes that for the purposes of knowledge acquisition, the semantic role labeller need not classify with complete precision so long as it can pick out high-quality sentences.  In other words, it is more important to identify a sentence as containing semantically rich components as opposed to knowing what precisely those semantics are.
+
+In terms of precision and recall, the SRL system scores too high on false negatives, that is, it dismisses too many spans as not being one of {\it undergoer}, {\it enabler}, {\it origin}, {\it destination}, {\it location}, {\it theme}, {\it time} or {\it result}.  While it has been conjectured that a basic set of four to five such roles may not be expressive enough to capture the process semantics, and that the set of roles should be expanded, the preliminary evidence is to the contrary.  In nearly all cases of false negatives, the span in question could readily be classified by a human as belonging to one of the pre-determined roles.  An ILP might increase precision but seems unlikely to increase recall since its imposition of global constraints would force more role assignments to be null.  
+
+\section{A Reproducible System}
+
+We ran experiments using the open source \func{bioprocess} system of \cite{sca}.  The SRL features are all typically lexico-syntactic, which \cite{bala}, \cite{gil} have lamented as requiring large amounts of training data to be effective.  Table~\ref{features} shows a representative example of the feature values.
+\begin{table}[t]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{c c} \toprule
+  Feature & Description\\ \midrule
+  EntHeadPOS  &  NN\\
+  EntHeadWord   &  {\it sediment}\\
+  EntityPOSDepRel &  NP, true[{\it sediment} depends on {\it turned}] \\
+  EntHeadEvtPOS   & {\it sediment}, VBN \\
+  PathEntToEvt  &  VBN$\uparrow$, VP$\uparrow$, ROOT$\downarrow$, S$\downarrow$, VP$\downarrow$, NP$\downarrow$, SBAR $\downarrow$, S$\downarrow$, VP$\downarrow$, VP$\downarrow$, PP$\downarrow$, NP$\downarrow$\\
+  EntHeadEvtHead &    {\it sediment}, {\it turned} \\
+  EntNPAndRelatedToEvt   & true[{\it sediment} is NP and depends on {\it turned}]  \\
+  EntPOSEntHeadEvtPOS  &   NP,{\it sediment}, VBN \\
+  EntPOSEvtPOSDepRel  &   NP, VBN, true\\
+  EntPOSEntParentPOSEvtPOS  &  NP, {\it sediment}, VBN \\
+  PathEntToAncestor  &  NP$\uparrow$, PP$\uparrow$,  VP$\uparrow$, ROOT$\downarrow$, S$\downarrow$, S$\downarrow$, VP$\downarrow$, NP$\downarrow$, SBAR$\downarrow$, S$\downarrow$, S$\downarrow$, VP$\downarrow$, VP$\downarrow$, VP$\downarrow$]  \\
+  PathEntToRoot  &  NP$\uparrow$, PP$\uparrow$,  VP$\uparrow$, VP$\uparrow$,  S$\uparrow$, SBAR$\uparrow$, NP$\uparrow$, VP$\uparrow$, S$\uparrow$, ROOT$\uparrow$, ROOT$\downarrow$ \\
+  EntParentPOSEvtPOS  &  {\it sediment}, VBN \\
+\bottomrule
+\end{tabular}
+\caption{SRL features (\cite{sca})}\label{features}
+\end{table}
+In determining optimal feature weights, the \func{bioprocess} software employs the Stanford CoreNLP linear classifier (\cite{stanny}) which applies Quasi-newton minimization to a log conditional objective function.
+We ran the system using five-fold cross-validation on a combined corpus of 185 paragraphs from the AI2 ProcessBank data (\cite{ai2}) and 112 sentences from \cite{sl}.  Those 112 sentences were chosen from the 785 available for their annotation of the role {\it trigger}.  The \func{bioprocess} system like all Propbank inspired systems relies on the identification of a verbal predicate.
+
+The precision, recall, and F1 for this baseline averaged over the five folds are 0.635, 0.275, and 0.383 respectively.  However, we see in Table~\ref{supervise} that performance very much depends on the number of training samples per role. Annotations for {\it undergoer} and {\it theme} comprise roughly two-thirds of the annotations.  If we limit the analysis to those two roles, we see a marked improvement in the poor recall score.
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{l c c c c} \toprule
+Roles & $\frac{\# annotations}{total}$ & Precision & Recall & F1 \\ \midrule
+Undergoer & 0.37 & 0.74 & 0.39 & 0.51 \\
++ Theme & 0.67 & 0.64 & 0.37 & 0.47 \\
++ Result & 0.79 & 0.63 & 0.33 & 0.44 \\
++ Location & 0.87 & 0.64 & 0.31 & 0.42 \\
++ Enabler & 0.93 & 0.63 & 0.30 & 0.40 \\
++ Destination & 0.96 & 0.64 & 0.29 & 0.40 \\
++ Time & 0.98 & 0.64 & 0.28 & 0.39 \\
++ Origin & 1.00 & 0.64 & 0.28 & 0.39 \\
+\bottomrule
+\end{tabular}
+\caption{Recall deteriorates as we add roles with fewer training labels}\label{supervise}
+\end{table}
+ To improve recall, we consider reducing the multiclass task into a binary one by lumping all semantic roles into a collective class \func{semantic} and setting it against the alternative \func{nonsemantic}.  We also consider a binary classifier for each individual role to possibly improve argument identification.  Table~\ref{binarize} shows the results using unregularized logistic regression.  
+
+Certainly in the preliminary stages of the IE task, we could consider employing the much simplified \func{semantic} classifier for its stronger recall.  The distinctions between roles would be of secondary concern when the task is to identify text that expresses multiple semantic roles, whatever they may be.
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{l c c c c} \toprule
+Role & Precision & Recall & F1 \\ \midrule
+\func{semantic} & 0.70 & 0.48 & 0.57 \\
+Undergoer & 0.81 & 0.35 & 0.49 \\
+Theme & 0.73 & 0.19 & 0.30 \\
+Result & 0.67 & 0.07 & 0.13 \\
+Location & 0.90 & 0.07 & 0.12 \\
+RawMaterial & 1.00 & 0.00 & 0.00 \\
+Destination & 1.00 & 0.01 & 0.03 \\
+Time & 1.00 & 0.00 & 0.00 \\
+Origin & 1.00 & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\caption{Using a logistic classifier per role}\label{binarize}
+\end{table}
+\section{Software Considerations}
+It is difficult to realize or even imagine realizing the end-to-end goal drawn in Figure 2 of \cite{bala}, without establishing a {\em live}, working stubbed-out system on {\tt ambiguity} no matter how humble it currently is.  A public alpha system encourages software transparency between lab personnel and provides a tangible baseline for experimentation and discussion.
+
+The author would be mildly interested in sudo privileges on {\tt ambiguity} to begin fleshing out the envisioned computing environment.
+
+\subsection{Interactive Data Analysis}
+The feeding of static json files containing role probabilities into the Python ILP software seems fraught with reproduciblity issues.  In particular, there could be software errors in the writing of the data, software errors in the reading of the data, and/or miscommunication as to what the fields signify.  The files could inadvertently change on disk (so-called bitrot).  Any improvements to either the quality of the data or the classifier itself would go unnoticed, or at least would need to wait until a future release, at which point a number of other formatting changes could be introduced to jeopardize correctness.  Ideally, we wish to live in a world where the ILP maintainer, as a matter of course in running his experiments, can reproduce the inputs at will and feeds the input data directly from memory without the awkward relay over disk.  In addition to the logistic benefits, he would gain greater insight into the data and could suggest/make improvements to the SRL core.
+
+To that end, we have written a short script {\tt PickleSRL.py} which runs the Java SRL system and stores the results for consumption by Python while avoiding the dangers of writing and reading json formats.  We hope others in the lab will come to adopt this style of tighter code integration.
+
+\section{Continued Work}
+Table~\ref{supervise} convincingly shows more training annotations would improve SRL performance to acceptable levels.  We believe development of the AKBC should continue in a supervised manner.  The exploration of unsupervised methods, while theoretically interesting, would be difficult to apply to a system still in its infancy.  Increased code sharing and a lab-wide infrastructure integrating the Java back-end, the Mongo data store, and the Python data tools would accelerate the pace of development and help to ensure correctness.
+
+\small{
+\printbibliography
+}
+
+\end{document}
