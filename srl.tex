@@ -47,7 +47,7 @@ Stony Brook, NY 11790 \\
 \maketitle
 
 \begin{abstract}
-We envision an automatic knowledge base construction (AKBC) system geared towards facts regarding natural processes, and whose primary performance metric shall be its ability to answer grade school science questions.  Our system relies on a semantic role labeller capable of identifying those parts of sentences corresponding to process roles, e.g., ``undergoer'', ``medium.''  This discriminative capability enables search agents to traverse the internet and collect semantically rich sentences chosen for relevance and role coverage.  This short report describes the current state of the research and offers some simple technical thoughts for increased collaboration and reproducibility of results.
+We envision an automatic knowledge base construction (AKBC) system geared towards facts regarding natural processes, and whose primary performance metric shall be its ability to answer grade school science questions.  Our system relies on a semantic role labeller capable of identifying those parts of sentences corresponding to process roles, e.g., ``undergoer'', ``theme.''  This discriminative capability enables search agents to traverse the internet and collect semantically rich sentences chosen for relevance and role coverage.  This short report describes the current state of the research and offers some simple technical thoughts for increased collaboration and reproducibility of results.
 \end{abstract}
 
 \section{System Synopsis}
@@ -134,7 +134,7 @@ It is difficult to realize or even imagine realizing the end-to-end goal drawn i
 
 The author would be mildly interested in sudo privileges on {\tt ambiguity} to begin fleshing out the envisioned computing environment.
 
-\subsection{Interactive Data Analysis}
+\subsection{Java-Python Complex}
 The feeding of static json files containing role probabilities into the Python ILP software seems fraught with reproduciblity issues.  In particular, there could be software errors in the writing of the data, software errors in the reading of the data, and/or miscommunication as to what the fields signify.  The files could inadvertently change on disk (so-called bitrot).  Any improvements to either the quality of the data or the classifier itself would go unnoticed, or at least would need to wait until a future release, at which point a number of other formatting changes could be introduced to jeopardize correctness.  Ideally, we wish to live in a world where the ILP maintainer, as a matter of course in running his experiments, can reproduce the inputs at will and feeds the input data directly from memory without the awkward relay over disk.  In addition to the logistic benefits, he would gain greater insight into the data and could suggest/make improvements to the SRL core.
 
 To that end, we have written a short script {\tt PickleSRL.py} which runs the Java SRL system and stores the results for consumption by Python while avoiding the dangers of writing and reading json formats.  We hope others in the lab will come to adopt this style of tighter code integration.
