@@ -1,0 +1,118 @@
+main() {
+  Execution directory: state/execs/61.exec
+  main {
+    Running SRL
+    Reading data {
+      s97.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/s97.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s97.txt
+      T1	Event 36 46	converting
+      E1	Event:T1 result:T101
+      T101	Entity 73 110	an inorganic form that plants can use
+      s75.txt
+      Updated minSentencesPerProcess - lib/Dataset/train/s75.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s75.txt
+      T1	Event 33 43	converting
+      E1	Event:T1 result:T101
+      T101	Entity 63 80	harmless nitrogen
+      s17.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s17.txt
+      T1	Event 26 36	converting
+      E1	Event:T1 agent:T101
+      T101	Entity 37 44	a solid
+      s70.txt
+      T1	Event 29 36	burning
+      E1	Event:T1 agent:T101
+      T101	Entity 37 56	an organic compound
+      s90.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s90.txt
+      T1	Event 28 40	transporting
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 113 127	carbon dioxide
+      T102	Entity 73 81	the body
+      s81.txt
+      T1	Event 0 10	combustion
+      E1	Event:T1 raw-material:T101 agent:T102
+      T101	Entity 97 103	oxygen
+      T102	Entity 23 84	fossil fuels , such as natural gas , fuel oil , coal or gasoline
+      s57.txt
+      T1	Event 32 39	produce
+      E1	Event:T1 result:T101
+      T101	Entity 32 71	produce heat which is radiated from the
+      s84.txt
+      T1	Event 91 98	develop
+      E1	Event:T1 agent:T101
+      T101	Entity 72 90	many other insects
+      s88.txt
+      T1	Event 49 54	turns
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 60 72	water vapour
+      T102	Entity 36 48	liquid water
+      s26.txt
+      T1	Event 46 53	divides
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 59 77	two daughter cells
+      T102	Entity 32 45	a single cell
+      s16.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s16.txt
+      T1	Event 0 11	evaporation
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 55 67	water vapour
+      T102	Entity 24 36	liquid water
+      s51.txt
+      T1	Event 30 40	vaporizing
+      E1	Event:T1 agent:T101
+      T101	Entity 41 50	the water
+    } [2.7s, cum. 19s]
+    [1, 11, 2, 4, 5, 9, 6, 10, 3, 7, 8, 0]
+    Iteration 1 {
+      Example s75 {
+        nitrogen cycle is the process of converting toxic ammonia into harmless nitrogen, by different types of bacteria.
+        ------------------Event: converting--------------
+        nitrogen cycle is the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria .:Agent:{Agent=0.9915093985497332, NONE=0.008490601450266819}
+        nitrogen cycle:Agent:{Agent=0.9673217708756809, NONE=0.03267822912431901}
+        nitrogen:Agent:{Agent=0.9935697508190603, NONE=0.006430249180939735}
+        cycle:Agent:{Agent=0.9874228479793704, NONE=0.012577152020629553}
+        is the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria:Agent:{Agent=0.9917322794095766, NONE=0.008267720590423387}
+        is:Agent:{Agent=0.9897265838520884, NONE=0.010273416147911506}
+        the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria:Agent:{Agent=0.98716155432064, NONE=0.01283844567935997}
+        the process:Agent:{Agent=0.98716155432064, NONE=0.01283844567935997}
+        the:Agent:{Agent=0.9894715488731398, NONE=0.010528451126860234}
+        process:Agent:{Agent=0.9935094794692259, NONE=0.006490520530774158}
+        of converting toxic ammonia into harmless nitrogen , by different types of bacteria:Agent:{Agent=0.9898848376452223, NONE=0.010115162354777739}
+        of:Agent:{Agent=0.9901898217323266, NONE=0.009810178267673421}
+        converting toxic ammonia into harmless nitrogen , by different types of bacteria:Agent:{Agent=0.9877115099988553, NONE=0.012288490001144781}
+        converting toxic ammonia into harmless nitrogen , by different types of bacteria:Agent:{Agent=0.9882393381847571, NONE=0.011760661815242891}
+        converting:Agent:{Agent=0.9848359691738849, NONE=0.015164030826115081}
+        toxic ammonia:Agent:{Agent=0.5324127684154847, NONE=0.46758723158451526}
+        toxic:Agent:{Agent=0.9796909047199458, NONE=0.02030909528005424}
+        ammonia:Agent:{Agent=0.9825156474001595, NONE=0.01748435259984046}
+        into harmless nitrogen:Agent:{Agent=0.9896031929876643, NONE=0.010396807012335672}
+        into:Agent:{Agent=0.9898302387856275, NONE=0.010169761214372531}
+        harmless nitrogen:Agent:{Agent=0.8770079291266418, NONE=0.12299207087335817}
+        harmless:Agent:{Agent=0.9741507120187402, NONE=0.0258492879812599}
+        nitrogen:Agent:{Agent=0.9903842449706859, NONE=0.009615755029314098}
+        ,:Agent:{Agent=0.9708623015098252, NONE=0.029137698490174786}
+        by different types of bacteria:Agent:{Agent=0.9863534990241195, NONE=0.013646500975880506}
+        by:Agent:{Agent=0.9866687151580452, NONE=0.013331284841954782}
+        different types of bacteria:Agent:{Agent=0.7038400984744765, NONE=0.2961599015255235}
+        different types:Agent:{Agent=0.6289230819734025, NONE=0.3710769180265975}
+        different:Agent:{Agent=0.9757203374219463, NONE=0.024279662578053657}
+        types:Agent:{Agent=0.9730086571436621, NONE=0.026991342856337863}
+        of bacteria:Agent:{Agent=0.9886448028738715, NONE=0.011355197126128503}
+        of:Agent:{Agent=0.9890256339782727, NONE=0.010974366021727347}
+        bacteria:Agent:{Agent=0.9394903108087435, NONE=0.06050968919125656}
+        bacteria:Agent:{Agent=0.9719850669911514, NONE=0.028014933008848657}
+        .:Agent:{Agent=0.9834065546112829, NONE=0.016593445388717137}
+        ERROR: java.lang.IndexOutOfBoundsException: toIndex = 2:
+java.util.ArrayList.subListRangeCheck(ArrayList.java:1004)
+java.util.ArrayList.subList(ArrayList.java:996)
+edu.stanford.nlp.bioprocess.DynamicProgrammingSRL.<init>(DynamicProgrammingSRL.java:206)
+edu.stanford.nlp.bioprocess.SRLPredictionInferer.Infer(SRLPredictionInferer.java:232)
+edu.stanford.nlp.bioprocess.Main.runSRLPrediction(Main.java:442)
+edu.stanford.nlp.bioprocess.Main.run(Main.java:248)
+fig.exec.Execution.runWithObjArray(Execution.java:341)
+fig.exec.Execution.run(Execution.java:329)
+edu.stanford.nlp.bioprocess.Main.main(Main.java:191)
+        Execution directory: state/execs/61.exec
+      } [5m33s, cum. 5m33s]

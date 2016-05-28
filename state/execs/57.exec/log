@@ -1,0 +1,85 @@
+main() {
+  Execution directory: state/execs/57.exec
+  main {
+    Running SRL
+    Reading data {
+      s97.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/s97.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s97.txt
+      T1	Event 36 46	converting
+      E1	Event:T1 result:T101
+      T101	Entity 73 110	an inorganic form that plants can use
+      s75.txt
+      Updated minSentencesPerProcess - lib/Dataset/train/s75.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s75.txt
+      T1	Event 33 43	converting
+      E1	Event:T1 result:T101
+      T101	Entity 63 80	harmless nitrogen
+      s17.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s17.txt
+      T1	Event 26 36	converting
+      E1	Event:T1 agent:T101
+      T101	Entity 37 44	a solid
+      s70.txt
+      T1	Event 29 36	burning
+      E1	Event:T1 agent:T101
+      T101	Entity 37 56	an organic compound
+      s90.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s90.txt
+      T1	Event 28 40	transporting
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 113 127	carbon dioxide
+      T102	Entity 73 81	the body
+      s81.txt
+      T1	Event 0 10	combustion
+      E1	Event:T1 raw-material:T101 agent:T102
+      T101	Entity 97 103	oxygen
+      T102	Entity 23 84	fossil fuels , such as natural gas , fuel oil , coal or gasoline
+      s57.txt
+      T1	Event 32 39	produce
+      E1	Event:T1 result:T101
+      T101	Entity 32 71	produce heat which is radiated from the
+      s84.txt
+      T1	Event 91 98	develop
+      E1	Event:T1 agent:T101
+      T101	Entity 72 90	many other insects
+      s88.txt
+      T1	Event 49 54	turns
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 60 72	water vapour
+      T102	Entity 36 48	liquid water
+      s26.txt
+      T1	Event 46 53	divides
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 59 77	two daughter cells
+      T102	Entity 32 45	a single cell
+      s16.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s16.txt
+      T1	Event 0 11	evaporation
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 55 67	water vapour
+      T102	Entity 24 36	liquid water
+      s51.txt
+      T1	Event 30 40	vaporizing
+      E1	Event:T1 agent:T101
+      T101	Entity 41 50	the water
+    } [2.8s, cum. 18s]
+    [8, 4, 5, 3, 11, 7, 0, 9, 10, 6, 1, 2]
+    Iteration 1 {
+      Example s88 {
+        evaporation is the process by which liquid water turns into water vapour through...
+        ------------------Event: turns--------------
+        ERROR: java.lang.ArrayIndexOutOfBoundsException: 382:
+edu.stanford.nlp.classify.LinearClassifier.weight(LinearClassifier.java:103)
+edu.stanford.nlp.classify.LinearClassifier.scoreOf(LinearClassifier.java:239)
+edu.stanford.nlp.classify.LinearClassifier.scoresOf(LinearClassifier.java:147)
+edu.stanford.nlp.classify.LinearClassifier.logProbabilityOf(LinearClassifier.java:297)
+edu.stanford.nlp.classify.LinearClassifier.probabilityOf(LinearClassifier.java:252)
+edu.stanford.nlp.bioprocess.SRLPredictionInferer.Infer(SRLPredictionInferer.java:188)
+edu.stanford.nlp.bioprocess.Main.runSRLPrediction(Main.java:442)
+edu.stanford.nlp.bioprocess.Main.run(Main.java:248)
+fig.exec.Execution.runWithObjArray(Execution.java:341)
+fig.exec.Execution.run(Execution.java:329)
+edu.stanford.nlp.bioprocess.Main.main(Main.java:191)
+        Execution directory: state/execs/57.exec
+      }

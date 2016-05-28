@@ -1,0 +1,507 @@
+main() {
+  Execution directory: state/execs/62.exec
+  main {
+    Running SRL
+    Reading data {
+      s97.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/s97.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s97.txt
+      T1	Event 36 46	converting
+      E1	Event:T1 result:T101
+      T101	Entity 73 110	an inorganic form that plants can use
+      s75.txt
+      Updated minSentencesPerProcess - lib/Dataset/train/s75.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s75.txt
+      T1	Event 33 43	converting
+      E1	Event:T1 result:T101
+      T101	Entity 63 80	harmless nitrogen
+      s17.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s17.txt
+      T1	Event 26 36	converting
+      E1	Event:T1 agent:T101
+      T101	Entity 37 44	a solid
+      s70.txt
+      T1	Event 29 36	burning
+      E1	Event:T1 agent:T101
+      T101	Entity 37 56	an organic compound
+      s90.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s90.txt
+      T1	Event 28 40	transporting
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 113 127	carbon dioxide
+      T102	Entity 73 81	the body
+      s81.txt
+      T1	Event 0 10	combustion
+      E1	Event:T1 raw-material:T101 agent:T102
+      T101	Entity 97 103	oxygen
+      T102	Entity 23 84	fossil fuels , such as natural gas , fuel oil , coal or gasoline
+      s57.txt
+      T1	Event 32 39	produce
+      E1	Event:T1 result:T101
+      T101	Entity 32 71	produce heat which is radiated from the
+      s84.txt
+      T1	Event 91 98	develop
+      E1	Event:T1 agent:T101
+      T101	Entity 72 90	many other insects
+      s88.txt
+      T1	Event 49 54	turns
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 60 72	water vapour
+      T102	Entity 36 48	liquid water
+      s26.txt
+      T1	Event 46 53	divides
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 59 77	two daughter cells
+      T102	Entity 32 45	a single cell
+      s16.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s16.txt
+      T1	Event 0 11	evaporation
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 55 67	water vapour
+      T102	Entity 24 36	liquid water
+      s51.txt
+      T1	Event 30 40	vaporizing
+      E1	Event:T1 agent:T101
+      T101	Entity 41 50	the water
+    } [2.9s, cum. 19s]
+    [6, 2, 5, 3, 11, 8, 0, 1, 7, 9, 10, 4]
+    Iteration 1 {
+      Example s57 {
+        the purpose of combustion is to produce heat which is radiated from the...
+        ------------------Event: produce--------------
+        the purpose of combustion is to produce heat which is radiated from the ...:NONE:{Agent=0.015492883101141941, NONE=0.9845071168988581}
+        the purpose of combustion:NONE:{Agent=0.035787148107641165, NONE=0.9642128518923588}
+        the purpose:NONE:{Agent=0.05802405593888971, NONE=0.9419759440611103}
+        the:NONE:{Agent=0.024059026165513697, NONE=0.9759409738344863}
+        purpose:NONE:{Agent=0.02073453797912672, NONE=0.9792654620208733}
+        of combustion:NONE:{Agent=0.018055491428133563, NONE=0.9819445085718664}
+        of:NONE:{Agent=0.0175590426436687, NONE=0.9824409573563313}
+        combustion:NONE:{Agent=0.05802405593888971, NONE=0.9419759440611103}
+        combustion:NONE:{Agent=0.02073453797912672, NONE=0.9792654620208733}
+        is to produce heat which is radiated from the:NONE:{Agent=0.01528598506438772, NONE=0.9847140149356123}
+        is:NONE:{Agent=0.017474863765660098, NONE=0.9825251362343399}
+        to produce heat which is radiated from the:NONE:{Agent=0.025620631108357883, NONE=0.9743793688916421}
+        to produce heat which is radiated from the:NONE:{Agent=0.03319246587623781, NONE=0.9668075341237622}
+        to:NONE:{Agent=0.0338862859564556, NONE=0.9661137140435444}
+        produce heat which is radiated from the:NONE:{Agent=0.024180886224100417, NONE=0.9758191137758996}
+        produce:NONE:{Agent=0.03182612229387871, NONE=0.9681738777061213}
+        heat which is radiated from the:NONE:{Agent=0.4712060536244097, NONE=0.5287939463755903}
+        heat:NONE:{Agent=0.4712060536244097, NONE=0.5287939463755903}
+        heat:NONE:{Agent=0.025579142283060685, NONE=0.9744208577169393}
+        which is radiated from the:NONE:{Agent=0.029447669638990592, NONE=0.9705523303610094}
+        which:NONE:{Agent=0.03175170000527883, NONE=0.9682482999947212}
+        which:NONE:{Agent=0.03175170000527883, NONE=0.9682482999947212}
+        is radiated from the:NONE:{Agent=0.018625732073966006, NONE=0.981374267926034}
+        is radiated from the:NONE:{Agent=0.017938914475666312, NONE=0.9820610855243337}
+        is:NONE:{Agent=0.021176570202155465, NONE=0.9788234297978445}
+        radiated from the:NONE:{Agent=0.025949326868949685, NONE=0.9740506731310503}
+        radiated:NONE:{Agent=0.034750110135979395, NONE=0.9652498898640206}
+        from the:NONE:{Agent=0.018055491428133563, NONE=0.9819445085718664}
+        from:NONE:{Agent=0.0175590426436687, NONE=0.9824409573563313}
+        the:NONE:{Agent=0.051119399341853944, NONE=0.9488806006581461}
+        the:NONE:{Agent=0.024059026165513697, NONE=0.9759409738344863}
+        ...:NONE:{Agent=0.02925080813806924, NONE=0.9707491918619308}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (NP (NN heat)) (SBAR (WHNP (WDT which)) (S (VP (VBZ is) (VP (VBN radiated) (PP (IN from) (NP (DT the)))))))):Result
+        ---------PREDICTIONS-------------------------
+        heat which is radiated from the [7 12], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      } [2m37s, cum. 2m37s]
+      Example s17 {
+        melting is the process of converting a solid into a liquid.
+        ------------------Event: converting--------------
+        melting is the process of converting a solid into a liquid .:NONE:{Agent=0.007595355577575624, NONE=0.9924046444224244}
+        melting:NONE:{Agent=0.03210284951440978, NONE=0.9678971504855902}
+        melting:NONE:{Agent=0.012476116425298889, NONE=0.9875238835747011}
+        is the process of converting a solid into a liquid:NONE:{Agent=0.007354969351807017, NONE=0.992645030648193}
+        is:NONE:{Agent=0.00933664973746795, NONE=0.990663350262532}
+        the process of converting a solid into a liquid:NONE:{Agent=0.010392434169192999, NONE=0.989607565830807}
+        the process:NONE:{Agent=0.010392434169192999, NONE=0.989607565830807}
+        the:NONE:{Agent=0.009795117906349238, NONE=0.9902048820936508}
+        process:NONE:{Agent=0.005627716769806335, NONE=0.9943722832301937}
+        of converting a solid into a liquid:NONE:{Agent=0.008598575226615668, NONE=0.9914014247733843}
+        of:NONE:{Agent=0.008358169281778016, NONE=0.991641830718222}
+        converting a solid into a liquid:NONE:{Agent=0.012184631800119305, NONE=0.9878153681998807}
+        converting a solid into a liquid:NONE:{Agent=0.01160173792124064, NONE=0.9883982620787594}
+        converting:NONE:{Agent=0.014947218799898243, NONE=0.9850527812001018}
+        a solid:NONE:{Agent=0.30950497574210795, NONE=0.690495024257892}
+        a:NONE:{Agent=0.016924090446263862, NONE=0.9830759095537361}
+        solid:NONE:{Agent=0.02494510664227445, NONE=0.9750548933577255}
+        into a liquid:NONE:{Agent=0.010247425346003758, NONE=0.9897525746539962}
+        into:NONE:{Agent=0.01004975457671986, NONE=0.9899502454232801}
+        a liquid:NONE:{Agent=0.36820647708549037, NONE=0.6317935229145096}
+        a:NONE:{Agent=0.01695395191942739, NONE=0.9830460480805726}
+        liquid:NONE:{Agent=0.017957405646683133, NONE=0.9820425943533169}
+        .:NONE:{Agent=0.015147985832777211, NONE=0.9848520141672228}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT a) (JJ solid)):Agent
+        ---------PREDICTIONS-------------------------
+        a solid                        [6 7], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+    } [2m37s, cum. 2m57s]
+    Iteration 2 {
+      Example s81 {
+        combustion occurs when fossil fuels, such as natural gas, fuel oil, coal or gasoline, react with oxygen.
+        ------------------Event: combustion--------------
+        combustion occurs when fossil fuels , such as natural gas , fuel oil , coal or gasoline , react with oxygen .:NONE:{Agent=0.012578235235688129, NONE=0.9874217647643119}
+        combustion:NONE:{Agent=0.06351940203811068, NONE=0.9364805979618893}
+        combustion:NONE:{Agent=0.015255485939958624, NONE=0.9847445140600414}
+        occurs when fossil fuels , such as natural gas , fuel oil , coal or gasoline , react with oxygen:NONE:{Agent=0.012729000053706363, NONE=0.9872709999462936}
+        occurs:NONE:{Agent=0.014925192492189487, NONE=0.9850748075078105}
+        when fossil fuels , such as natural gas , fuel oil , coal or gasoline , react with oxygen:NONE:{Agent=0.02272210703447175, NONE=0.9772778929655282}
+        when:NONE:{Agent=0.024400870442054856, NONE=0.9755991295579451}
+        when:NONE:{Agent=0.024400870442054856, NONE=0.9755991295579451}
+        fossil fuels , such as natural gas , fuel oil , coal or gasoline , react with oxygen:NONE:{Agent=0.024393642468968135, NONE=0.9756063575310319}
+        fossil fuels , such as natural gas , fuel oil , coal or gasoline ,:NONE:{Agent=0.16847615593554166, NONE=0.8315238440644583}
+        fossil fuels:NONE:{Agent=0.06515172775474476, NONE=0.9348482722452552}
+        fossil:NONE:{Agent=0.02791650787473532, NONE=0.9720834921252647}
+        fuels:NONE:{Agent=0.022062748779164476, NONE=0.9779372512208355}
+        ,:NONE:{Agent=0.03157678898130867, NONE=0.9684232110186913}
+        such as natural gas , fuel oil , coal or gasoline:NONE:{Agent=0.01771959246952881, NONE=0.9822804075304712}
+        such:NONE:{Agent=0.02791650787473532, NONE=0.9720834921252647}
+        as:NONE:{Agent=0.017388936637064867, NONE=0.9826110633629351}
+        natural gas , fuel oil , coal or gasoline:NONE:{Agent=0.08671044196883704, NONE=0.913289558031163}
+        natural gas:NONE:{Agent=0.08671044196883704, NONE=0.913289558031163}
+        natural:NONE:{Agent=0.02791650787473532, NONE=0.9720834921252647}
+        gas:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        ,:NONE:{Agent=0.031004976289879527, NONE=0.9689950237101205}
+        fuel oil:NONE:{Agent=0.08671044196883704, NONE=0.913289558031163}
+        fuel:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        oil:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        ,:NONE:{Agent=0.03157678898130867, NONE=0.9684232110186913}
+        coal:NONE:{Agent=0.08671044196883704, NONE=0.913289558031163}
+        coal:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        or:NONE:{Agent=0.03342819089355731, NONE=0.9665718091064427}
+        gasoline:NONE:{Agent=0.08671044196883704, NONE=0.913289558031163}
+        gasoline:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        ,:NONE:{Agent=0.03157678898130867, NONE=0.9684232110186913}
+        react with oxygen:NONE:{Agent=0.02279974623714598, NONE=0.977200253762854}
+        react:NONE:{Agent=0.033668982363499245, NONE=0.9663310176365008}
+        with oxygen:NONE:{Agent=0.01771959246952881, NONE=0.9822804075304712}
+        with:NONE:{Agent=0.017388936637064867, NONE=0.9826110633629351}
+        oxygen:NONE:{Agent=0.08671044196883711, NONE=0.9132895580311629}
+        oxygen:NONE:{Agent=0.017603390999493596, NONE=0.9823966090005064}
+        .:NONE:{Agent=0.020047567532607613, NONE=0.9799524324673924}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (NP (JJ fossil) (NNS fuels)) (, ,) (PP (JJ such) (IN as) (NP (NP (JJ natural) (NN gas)) (, ,) (NP (NN fuel) (NN oil)) (, ,) (NP (NN coal)) (CC or) (NP (NN gasoline)))) (, ,)):Agent
+        (NP (NN oxygen)):RawMaterial
+        ---------PREDICTIONS-------------------------
+        fossil fuels , such as natural gas , fuel oil , coal or gasoline , [3 17], Gold:  Agent Predicted: NONE
+        oxygen                         [20 20], Gold:  RawMaterial Predicted: NONE
+        ------------------------------------------
+      }
+      Example s70 {
+        combustion is the process of burning an organic compound in oxygen to produce...
+        ------------------Event: burning--------------
+        combustion is the process of burning an organic compound in oxygen to produce ...:NONE:{Agent=0.007976216406194836, NONE=0.9920237835938052}
+        combustion:NONE:{Agent=0.028808613532891658, NONE=0.9711913864671083}
+        combustion:NONE:{Agent=0.012121142801393203, NONE=0.9878788571986068}
+        is the process of burning an organic compound in oxygen to produce:NONE:{Agent=0.007570079812876829, NONE=0.9924299201871232}
+        is:NONE:{Agent=0.009548716276292168, NONE=0.9904512837237078}
+        the process of burning an organic compound in oxygen to produce:NONE:{Agent=0.010140405721266066, NONE=0.9898595942787339}
+        the process:NONE:{Agent=0.010140405721266066, NONE=0.9898595942787339}
+        the:NONE:{Agent=0.009519843347715495, NONE=0.9904801566522845}
+        process:NONE:{Agent=0.005981441968797685, NONE=0.9940185580312023}
+        of burning an organic compound in oxygen to produce:NONE:{Agent=0.009036731222745398, NONE=0.9909632687772546}
+        of:NONE:{Agent=0.008913089290363163, NONE=0.9910869107096368}
+        burning an organic compound in oxygen to produce:NONE:{Agent=0.016260696805362795, NONE=0.9837393031946372}
+        burning an organic compound in oxygen to produce:NONE:{Agent=0.015227717535213015, NONE=0.984772282464787}
+        burning:NONE:{Agent=0.020019962059224627, NONE=0.9799800379407754}
+        an organic compound:NONE:{Agent=0.32995743227919067, NONE=0.6700425677208093}
+        an:NONE:{Agent=0.015849461003328624, NONE=0.9841505389966714}
+        organic:NONE:{Agent=0.019567344550894816, NONE=0.9804326554491052}
+        compound:NONE:{Agent=0.01616302664376046, NONE=0.9838369733562395}
+        in oxygen:NONE:{Agent=0.017783286217382566, NONE=0.9822167137826174}
+        in:NONE:{Agent=0.012560951177555957, NONE=0.987439048822444}
+        oxygen:NONE:{Agent=0.2227659817260378, NONE=0.7772340182739622}
+        oxygen:NONE:{Agent=0.012129778761618026, NONE=0.987870221238382}
+        to produce:NONE:{Agent=0.01792559465780552, NONE=0.9820744053421945}
+        to produce:NONE:{Agent=0.016647482065701324, NONE=0.9833525179342987}
+        to:NONE:{Agent=0.025812381994344435, NONE=0.9741876180056556}
+        produce:NONE:{Agent=0.027959373800989673, NONE=0.9720406261990103}
+        produce:NONE:{Agent=0.0281975907380817, NONE=0.9718024092619183}
+        ...:NONE:{Agent=0.029122198864085957, NONE=0.970877801135914}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT an) (JJ organic) (NN compound)):Agent
+        ---------PREDICTIONS-------------------------
+        an organic compound            [6 8], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+    }
+    Iteration 3 {
+      Example s51 {
+        evaporation is the process of vaporizing the water from a solution to produce concentrated product.
+        ------------------Event: vaporizing--------------
+        evaporation is the process of vaporizing the water from a solution to produce concentrated product .:NONE:{Agent=0.008235808870145078, NONE=0.9917641911298549}
+        evaporation:NONE:{Agent=0.028498255483711876, NONE=0.9715017445162881}
+        evaporation:NONE:{Agent=0.010998792742753838, NONE=0.9890012072572462}
+        is the process of vaporizing the water from a solution to produce concentrated product:NONE:{Agent=0.008029321791710675, NONE=0.9919706782082893}
+        is:NONE:{Agent=0.010010024988381327, NONE=0.9899899750116187}
+        the process of vaporizing the water from a solution to produce concentrated product:NONE:{Agent=0.011425479326156007, NONE=0.988574520673844}
+        the process:NONE:{Agent=0.011425479326156007, NONE=0.988574520673844}
+        the:NONE:{Agent=0.01025341945024738, NONE=0.9897465805497526}
+        process:NONE:{Agent=0.005927602407678534, NONE=0.9940723975923215}
+        of vaporizing the water from a solution to produce concentrated product:NONE:{Agent=0.009146375551025043, NONE=0.990853624448975}
+        of:NONE:{Agent=0.008940510601014418, NONE=0.9910594893989856}
+        vaporizing the water from a solution to produce concentrated product:NONE:{Agent=0.01622331530914134, NONE=0.9837766846908587}
+        vaporizing the water from a solution to produce concentrated product:NONE:{Agent=0.015508915794388622, NONE=0.9844910842056114}
+        vaporizing:NONE:{Agent=0.020071148100098357, NONE=0.9799288518999016}
+        the water:NONE:{Agent=0.32958408038996184, NONE=0.6704159196100381}
+        the:NONE:{Agent=0.012164998849241382, NONE=0.9878350011507586}
+        water:NONE:{Agent=0.016086488185204417, NONE=0.9839135118147956}
+        from a solution to produce concentrated product:NONE:{Agent=0.011129604335772036, NONE=0.988870395664228}
+        from:NONE:{Agent=0.010989588347506962, NONE=0.989010411652493}
+        a solution to produce concentrated product:NONE:{Agent=0.3470041435870329, NONE=0.6529958564129671}
+        a:NONE:{Agent=0.015322715000584908, NONE=0.9846772849994151}
+        solution:NONE:{Agent=0.016872049944126166, NONE=0.9831279500558738}
+        to produce concentrated product:NONE:{Agent=0.017878680199600483, NONE=0.9821213198003995}
+        to produce concentrated product:NONE:{Agent=0.016993430522243447, NONE=0.9830065694777566}
+        to:NONE:{Agent=0.025890092558882527, NONE=0.9741099074411175}
+        produce concentrated product:NONE:{Agent=0.016973475163551077, NONE=0.9830265248364489}
+        produce:NONE:{Agent=0.025606896857184425, NONE=0.9743931031428156}
+        concentrated product:NONE:{Agent=0.05399484789876852, NONE=0.9460051521012315}
+        concentrated:NONE:{Agent=0.024379271562471216, NONE=0.9756207284375288}
+        product:NONE:{Agent=0.015477183076792023, NONE=0.984522816923208}
+        .:NONE:{Agent=0.01566185262614428, NONE=0.9843381473738557}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT the) (NN water)):Agent
+        ---------PREDICTIONS-------------------------
+        the water                      [6 7], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+      Example s88 {
+        evaporation is the process by which liquid water turns into water vapour through...
+        ------------------Event: turns--------------
+        evaporation is the process by which liquid water turns into water vapor through ...:NONE:{Agent=0.01203492854311261, NONE=0.9879650714568874}
+        evaporation:NONE:{Agent=0.027425139805675958, NONE=0.972574860194324}
+        evaporation:NONE:{Agent=0.013341175450156006, NONE=0.986658824549844}
+        is the process by which liquid water turns into water vapor through:NONE:{Agent=0.011835323268710951, NONE=0.988164676731289}
+        is:NONE:{Agent=0.01350023431460301, NONE=0.986499765685397}
+        the process by which liquid water turns into water vapor through:NONE:{Agent=0.026575305964916862, NONE=0.9734246940350831}
+        the process:NONE:{Agent=0.026575305964916862, NONE=0.9734246940350831}
+        the:NONE:{Agent=0.016431554356354128, NONE=0.9835684456436459}
+        process:NONE:{Agent=0.011934027775599487, NONE=0.9880659722244005}
+        by which liquid water turns into water vapor through:NONE:{Agent=0.015655427195315208, NONE=0.9843445728046848}
+        by which:NONE:{Agent=0.017596265503985187, NONE=0.9824037344960148}
+        by:NONE:{Agent=0.01416618060160546, NONE=0.9858338193983945}
+        which:NONE:{Agent=0.02367046627145697, NONE=0.976329533728543}
+        which:NONE:{Agent=0.02367046627145697, NONE=0.976329533728543}
+        liquid water turns into water vapor through:NONE:{Agent=0.01674846779224648, NONE=0.9832515322077535}
+        liquid water:Agent:{Agent=0.5805924189447977, NONE=0.41940758105520226}
+        liquid:NONE:{Agent=0.02488202267401185, NONE=0.9751179773259882}
+        water:NONE:{Agent=0.01988306389517258, NONE=0.9801169361048274}
+        turns into water vapor through:NONE:{Agent=0.016111437400600503, NONE=0.9838885625993995}
+        turns:NONE:{Agent=0.01950953362006458, NONE=0.9804904663799354}
+        into water vapor:NONE:{Agent=0.01517371619692165, NONE=0.9848262838030784}
+        into:NONE:{Agent=0.014714221367982283, NONE=0.9852857786320177}
+        water vapor:Agent:{Agent=0.6310495518695262, NONE=0.36895044813047384}
+        water:NONE:{Agent=0.016880808594562757, NONE=0.9831191914054372}
+        vapor:NONE:{Agent=0.02125770689468065, NONE=0.9787422931053193}
+        through:NONE:{Agent=0.02129839698424163, NONE=0.9787016030157584}
+        through:NONE:{Agent=0.02164942887271437, NONE=0.9783505711272856}
+        ...:NONE:{Agent=0.029224192643107938, NONE=0.9707758073568921}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ liquid) (NN water)):Agent
+        (NP (NN water) (NN vapor)):Result
+        ---------PREDICTIONS-------------------------
+        liquid water                   [6 7], Gold:  Agent Predicted: Agent
+        water vapor                    [10 11], Gold:  Result Predicted: Agent
+        ------------------------------------------
+      }
+    }
+    Iteration 4 {
+      Example s97 {
+        nitrogen fixation is the process of converting atmospheric nitrogen into an inorganic form that plants can use.
+        ------------------Event: converting--------------
+        nitrogen fixation is the process of converting atmospheric nitrogen into an inorganic form that plants can use .:NONE:{Agent=0.009139672015010647, NONE=0.9908603279849894}
+        nitrogen fixation:NONE:{Agent=0.03295461279505496, NONE=0.967045387204945}
+        nitrogen:NONE:{Agent=0.013212819501373207, NONE=0.9867871804986268}
+        fixation:NONE:{Agent=0.013212819501373207, NONE=0.9867871804986268}
+        is the process of converting atmospheric nitrogen into an inorganic form that plants can use:NONE:{Agent=0.008914385372667755, NONE=0.9910856146273322}
+        is:NONE:{Agent=0.011037254049259704, NONE=0.9889627459507403}
+        the process of converting atmospheric nitrogen into an inorganic form that plants can use:NONE:{Agent=0.011922537398803223, NONE=0.9880774626011968}
+        the process:NONE:{Agent=0.011922537398803223, NONE=0.9880774626011968}
+        the:NONE:{Agent=0.010467645360615063, NONE=0.9895323546393849}
+        process:NONE:{Agent=0.006694981511916165, NONE=0.9933050184880838}
+        of converting atmospheric nitrogen into an inorganic form that plants can use:NONE:{Agent=0.010665354369233548, NONE=0.9893346456307665}
+        of:NONE:{Agent=0.010341567434737353, NONE=0.9896584325652626}
+        converting atmospheric nitrogen into an inorganic form that plants can use:NONE:{Agent=0.014487490691520666, NONE=0.9855125093084793}
+        converting atmospheric nitrogen into an inorganic form that plants can use:NONE:{Agent=0.013879082116496577, NONE=0.9861209178835034}
+        converting:NONE:{Agent=0.017785028741496234, NONE=0.9822149712585038}
+        atmospheric nitrogen:Agent:{Agent=0.641851305397262, NONE=0.358148694602738}
+        atmospheric:NONE:{Agent=0.0220983876011992, NONE=0.9779016123988008}
+        nitrogen:NONE:{Agent=0.017300640126193922, NONE=0.9826993598738061}
+        into an inorganic form that plants can use:NONE:{Agent=0.011477940834408007, NONE=0.988522059165592}
+        into:NONE:{Agent=0.011223556708556015, NONE=0.988776443291444}
+        an inorganic form that plants can use:NONE:{Agent=0.1462993554847489, NONE=0.8537006445152511}
+        an inorganic form:Agent:{Agent=0.5698984162157541, NONE=0.4301015837842459}
+        an:NONE:{Agent=0.01694358979610211, NONE=0.9830564102038979}
+        inorganic:NONE:{Agent=0.026379049199258042, NONE=0.973620950800742}
+        form:NONE:{Agent=0.01963921539112312, NONE=0.9803607846088769}
+        that plants can use:NONE:{Agent=0.02981881864833058, NONE=0.9701811813516694}
+        that plants:NONE:{Agent=0.03217035327976736, NONE=0.9678296467202326}
+        that:NONE:{Agent=0.03217035327976736, NONE=0.9678296467202326}
+        plants:NONE:{Agent=0.030091560539087014, NONE=0.969908439460913}
+        can use:NONE:{Agent=0.024910104428416346, NONE=0.9750898955715837}
+        can use:NONE:{Agent=0.023685344168323796, NONE=0.9763146558316762}
+        can:NONE:{Agent=0.03768956197874296, NONE=0.962310438021257}
+        use:NONE:{Agent=0.02107328429606803, NONE=0.978926715703932}
+        use:NONE:{Agent=0.03151460365264802, NONE=0.968485396347352}
+        .:NONE:{Agent=0.016628583355324134, NONE=0.9833714166446759}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (NP (DT an) (JJ inorganic) (NN form)) (SBAR (WHNP (WDT that) (NNS plants)) (S (VP (MD can) (VP (VB use)))))):Result
+        ---------PREDICTIONS-------------------------
+        atmospheric nitrogen           [7 8], Gold:  NONE Predicted: Agent
+        an inorganic form that plants can use [10 16], Gold:  Result Predicted: NONE
+        an inorganic form              [10 12], Gold:  NONE Predicted: Agent
+        ------------------------------------------
+      }
+      Example s75 {
+        nitrogen cycle is the process of converting toxic ammonia into harmless nitrogen, by different types of bacteria.
+        ------------------Event: converting--------------
+        nitrogen cycle is the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria .:NONE:{Agent=0.009139672015010647, NONE=0.9908603279849894}
+        nitrogen cycle:NONE:{Agent=0.03295461279505496, NONE=0.967045387204945}
+        nitrogen:NONE:{Agent=0.013212819501373207, NONE=0.9867871804986268}
+        cycle:NONE:{Agent=0.013212819501373207, NONE=0.9867871804986268}
+        is the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria:NONE:{Agent=0.008914385372667755, NONE=0.9910856146273322}
+        is:NONE:{Agent=0.011037254049259704, NONE=0.9889627459507403}
+        the process of converting toxic ammonia into harmless nitrogen , by different types of bacteria:NONE:{Agent=0.011922537398803223, NONE=0.9880774626011968}
+        the process:NONE:{Agent=0.011922537398803223, NONE=0.9880774626011968}
+        the:NONE:{Agent=0.010467645360615063, NONE=0.9895323546393849}
+        process:NONE:{Agent=0.006694981511916165, NONE=0.9933050184880838}
+        of converting toxic ammonia into harmless nitrogen , by different types of bacteria:NONE:{Agent=0.010665354369233548, NONE=0.9893346456307665}
+        of:NONE:{Agent=0.010341567434737353, NONE=0.9896584325652626}
+        converting toxic ammonia into harmless nitrogen , by different types of bacteria:NONE:{Agent=0.014487490691520666, NONE=0.9855125093084793}
+        converting toxic ammonia into harmless nitrogen , by different types of bacteria:NONE:{Agent=0.013879082116496577, NONE=0.9861209178835034}
+        converting:NONE:{Agent=0.017785028741496234, NONE=0.9822149712585038}
+        toxic ammonia:Agent:{Agent=0.641851305397262, NONE=0.358148694602738}
+        toxic:NONE:{Agent=0.0220983876011992, NONE=0.9779016123988008}
+        ammonia:NONE:{Agent=0.017300640126193922, NONE=0.9826993598738061}
+        into harmless nitrogen:NONE:{Agent=0.011477940834408007, NONE=0.988522059165592}
+        into:NONE:{Agent=0.011223556708556015, NONE=0.988776443291444}
+        harmless nitrogen:NONE:{Agent=0.1462993554847489, NONE=0.8537006445152511}
+        harmless:NONE:{Agent=0.026379049199258042, NONE=0.973620950800742}
+        nitrogen:NONE:{Agent=0.0183943153116628, NONE=0.9816056846883372}
+        ,:NONE:{Agent=0.02966929799839846, NONE=0.9703307020016015}
+        by different types of bacteria:NONE:{Agent=0.013757425331578865, NONE=0.9862425746684211}
+        by:NONE:{Agent=0.013439872515356388, NONE=0.9865601274846436}
+        different types of bacteria:NONE:{Agent=0.14934992412753834, NONE=0.8506500758724617}
+        different types:Agent:{Agent=0.5758239978883977, NONE=0.4241760021116024}
+        different:NONE:{Agent=0.026379049199258042, NONE=0.973620950800742}
+        types:NONE:{Agent=0.027735124032201686, NONE=0.9722648759677983}
+        of bacteria:NONE:{Agent=0.011728317395378385, NONE=0.9882716826046216}
+        of:NONE:{Agent=0.011332418269363043, NONE=0.988667581730637}
+        bacteria:NONE:{Agent=0.05923007690573612, NONE=0.9407699230942639}
+        bacteria:NONE:{Agent=0.030091560539087014, NONE=0.969908439460913}
+        .:NONE:{Agent=0.016955666011578607, NONE=0.9830443339884214}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ harmless) (NN nitrogen)):Result
+        ---------PREDICTIONS-------------------------
+        toxic ammonia                  [7 8], Gold:  NONE Predicted: Agent
+        harmless nitrogen              [10 11], Gold:  Result Predicted: NONE
+        different types                [14 15], Gold:  NONE Predicted: Agent
+        ------------------------------------------
+      }
+    }
+    Iteration 5 {
+      Example s84 {
+        complete metamorphosis is the way butterflies, bees, flies, beetles and many other insects develop.
+        ------------------Event: develop--------------
+        complete metamorphosis is the way butterflies , bees , flies , beetles and many other insects develop .:NONE:{Agent=0.01541358793695935, NONE=0.9845864120630407}
+        complete metamorphosis:NONE:{Agent=0.03383464370573219, NONE=0.9661653562942678}
+        complete:NONE:{Agent=0.029209326774685573, NONE=0.9707906732253144}
+        metamorphosis:NONE:{Agent=0.015753769700001752, NONE=0.9842462302999982}
+        is the way butterflies , bees , flies , beetles and many other insects develop:NONE:{Agent=0.01503166059149541, NONE=0.9849683394085046}
+        is:NONE:{Agent=0.017504990744172, NONE=0.982495009255828}
+        the way butterflies , bees , flies , beetles and many other insects develop:NONE:{Agent=0.04516079257724448, NONE=0.9548392074227555}
+        the way:NONE:{Agent=0.04516079257724448, NONE=0.9548392074227555}
+        the:NONE:{Agent=0.02023158750115084, NONE=0.9797684124988492}
+        way:NONE:{Agent=0.01773162476248924, NONE=0.9822683752375108}
+        butterflies , bees , flies , beetles and many other insects develop:NONE:{Agent=0.032602984142495406, NONE=0.9673970158575046}
+        butterflies , bees , flies , beetles and many other insects develop:NONE:{Agent=0.026775592379630564, NONE=0.9732244076203694}
+        butterflies , bees , flies , beetles and many other insects:Agent:{Agent=0.5680516121521294, NONE=0.4319483878478706}
+        butterflies:NONE:{Agent=0.4891338905049545, NONE=0.5108661094950455}
+        butterflies:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        ,:NONE:{Agent=0.032171719737705495, NONE=0.9678282802622945}
+        bees:NONE:{Agent=0.4891338905049545, NONE=0.5108661094950455}
+        bees:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        ,:NONE:{Agent=0.032171719737705495, NONE=0.9678282802622945}
+        flies:NONE:{Agent=0.4891338905049545, NONE=0.5108661094950455}
+        flies:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        ,:NONE:{Agent=0.031602778469807524, NONE=0.9683972215301925}
+        beetles:NONE:{Agent=0.4891338905049545, NONE=0.5108661094950455}
+        beetles:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        and:NONE:{Agent=0.03508808859613899, NONE=0.964911911403861}
+        many other insects:NONE:{Agent=0.48913389050495454, NONE=0.5108661094950455}
+        many:NONE:{Agent=0.029209326774685573, NONE=0.9707906732253144}
+        other:NONE:{Agent=0.029209326774685573, NONE=0.9707906732253144}
+        insects:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        develop:NONE:{Agent=0.025466265866002424, NONE=0.9745337341339976}
+        develop:NONE:{Agent=0.035891410476664776, NONE=0.9641085895233352}
+        .:NONE:{Agent=0.02461789722033847, NONE=0.9753821027796615}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ many) (JJ other) (NNS insects)):Agent
+        ---------PREDICTIONS-------------------------
+        butterflies , bees , flies , beetles and many other insects [5 15], Gold:  NONE Predicted: Agent
+        many other insects             [13 15], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+      Example s26 {
+        mitosis is the process by which a single cell divides into two daughter cells.
+        ------------------Event: divides--------------
+        mitosis is the process by which a single cell divides into two daughter cells .:NONE:{Agent=0.012409495875621679, NONE=0.9875905041243783}
+        mitosis:NONE:{Agent=0.03073054273183451, NONE=0.9692694572681655}
+        mitosis:NONE:{Agent=0.014935575085998298, NONE=0.9850644249140017}
+        is the process by which a single cell divides into two daughter cells:NONE:{Agent=0.012122519060253523, NONE=0.9878774809397465}
+        is:NONE:{Agent=0.013988013925899323, NONE=0.9860119860741007}
+        the process by which a single cell divides into two daughter cells:NONE:{Agent=0.027951768323736026, NONE=0.972048231676264}
+        the process:NONE:{Agent=0.027951768323736026, NONE=0.972048231676264}
+        the:NONE:{Agent=0.01763845505797279, NONE=0.9823615449420272}
+        process:NONE:{Agent=0.012343970992087283, NONE=0.9876560290079127}
+        by which a single cell divides into two daughter cells:NONE:{Agent=0.016387802005942365, NONE=0.9836121979940576}
+        by which:NONE:{Agent=0.017544895276514816, NONE=0.9824551047234852}
+        by:NONE:{Agent=0.014020081972068832, NONE=0.9859799180279312}
+        which:NONE:{Agent=0.02447996014130327, NONE=0.9755200398586967}
+        which:NONE:{Agent=0.02447996014130327, NONE=0.9755200398586967}
+        a single cell divides into two daughter cells:NONE:{Agent=0.01808780654236053, NONE=0.9819121934576395}
+        a single cell:Agent:{Agent=0.6680847966555978, NONE=0.33191520334440217}
+        a:NONE:{Agent=0.0231770697418886, NONE=0.9768229302581114}
+        single:NONE:{Agent=0.02668075322662833, NONE=0.9733192467733717}
+        cell:NONE:{Agent=0.019915326493460284, NONE=0.9800846735065397}
+        divides into two daughter cells:NONE:{Agent=0.01722367249320167, NONE=0.9827763275067983}
+        divides:NONE:{Agent=0.020549281404290576, NONE=0.9794507185957094}
+        into two daughter cells:NONE:{Agent=0.014670625110619118, NONE=0.9853293748893809}
+        into:NONE:{Agent=0.014223270119984366, NONE=0.9857767298800156}
+        two daughter cells:Agent:{Agent=0.6865154506375409, NONE=0.31348454936245906}
+        two:NONE:{Agent=0.03893511358912549, NONE=0.9610648864108745}
+        daughter:NONE:{Agent=0.016016103130970127, NONE=0.9839838968690299}
+        cells:NONE:{Agent=0.03224306685527645, NONE=0.9677569331447236}
+        .:NONE:{Agent=0.02498187098222393, NONE=0.9750181290177761}
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT a) (JJ single) (NN cell)):Agent
+        (NP (CD two) (NN daughter) (NNS cells)):Result
+        ---------PREDICTIONS-------------------------
+        a single cell                  [6 8], Gold:  Agent Predicted: Agent
+        two daughter cells             [11 13], Gold:  Result Predicted: Agent
+        ------------------------------------------
+      }
+    }
+    
+    ------------------------------------------Dev-------------------------------------------
+    Precision NaN NaN 0.500 0.000 0.333 NaN
+    Recall    0.000 0.000 0.333 0.000 0.333 0.133
+    F1        NaN NaN 0.400 NaN 0.333 NaN
+  } [2m58s, cum. 2m58s]
+  Execution directory: state/execs/62.exec
+} [2m58s]

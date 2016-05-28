@@ -1,0 +1,564 @@
+main() {
+  Execution directory: state/execs/37.exec
+  Reading data {
+    s587.txt
+    Updated maxSentencesPerProcess - /home/dick/srl/goto/lib/Dataset/train/s587.txt
+    Updated maxTokensPerProcess - /home/dick/srl/goto/lib/Dataset/train/s587.txt
+    T1	Event 46 52	travel
+    E1	Event:T1 agent:T101
+    T101	Entity 34 45	light waves
+    s258.txt
+    Updated minSentencesPerProcess - /home/dick/srl/goto/lib/Dataset/train/s258.txt
+    Updated minTokensPerProcess - /home/dick/srl/goto/lib/Dataset/train/s258.txt
+    T1	Event 40 53	breaking down
+    E1	Event:T1 result:T101 agent:T102
+    T101	Entity 62 84	into smaller fragments
+    T102	Entity 54 61	bedrock
+    p77.txt
+    Updated maxSentencesPerProcess - /home/dick/srl/goto/lib/Dataset/train/p77.txt
+    Updated maxTokensPerProcess - /home/dick/srl/goto/lib/Dataset/train/p77.txt
+    T1	Event 29 39	glycolysis
+    E1	Event:T1 
+    T2	Event 72 89	energy investment
+    E2	Event:T2 super-event:E1 same-event:E4
+    T3	Event 94 107	energy payoff
+    E3	Event:T3 super-event:E1 same-event:E6
+    T4	Event 120 143	energy investment phase
+    E4	Event:T4 
+    T5	Event 163 169	spends
+    E5	Event:T5 agent:T6 theme:T7 super-event:E4
+    T6	Entity 145 153	the cell
+    T7	Entity 170 173	ATP
+    T8	Event 226 245	energy payoff phase
+    E6	Event:T8 
+    T9	Event 259 267	produced
+    E7	Event:T9 result:T11 agent:T10 super-event:E6 cotemporal:E8
+    T10	Entity 271 302	substrate-level phosphorylation
+    T11	Entity 252 255	ATP
+    T12	Event 315 322	reduced
+    E8	Event:T12 super-event:E6 raw-material:T13 result:T14 agent:T15
+    T13	Entity 307 311	NAD+
+    T14	Entity 326 330	NADH
+    T15	Entity 334 382	electrons released from the oxidation of glucose
+    p12.txt
+    T1	Event 24 37	genetic drift
+    E1	Event:T1 time:T6 causes:E3 causes2:E4 none:T9 none:T10
+    T6	Entity 45 59	the bottleneck
+    T2	Event 78 82	loss
+    E3	Event:T2 theme:T8 cotemporal:E4 none:T11
+    T3	Event 111 119	increase
+    E4	Event:T3 theme:T7 none:T12
+    T7	Entity 123 155	the frequency of harmful alleles
+    T8	Entity 86 103	genetic variation
+    T10	Entity 24 37	genetic drift
+    T11	Entity 76 82	a loss
+    T12	Entity 108 119	an increase
+    T9	Entity 0 10	These data
+    p19.txt
+    T1	Event 10 31	enzymatic degradation
+    E1	Event:T1 next-event:E2 theme:T17
+    T2	Entity 45 92	a second DNA strand, complementary to the first
+    T3	Event 97 108	synthesized
+    E2	Event:T3 agent:T4 result:T5 result2:T2 next-event:E4
+    T4	Entity 112 126	DNA polymerase
+    T5	Entity 142 161	double-stranded DNA
+    T6	Entity 172 196	complementary DNA (cDNA)
+    *	same-entity T5 T6 T7 T14
+    T7	Entity 251 259	the cDNA
+    T8	Event 244 250	modify
+    E3	Event:T8 agent:T9 theme:T7 super-event:E4 cotemporal:E5
+    T9	Entity 219 234	the researchers
+    T10	Event 201 207	create
+    E4	Event:T10 result:T18
+    T11	Event 263 269	adding
+    E5	Event:T11 raw-material:T12 location:T13 next-event:E6 agent:T9 theme:T7
+    T12	Entity 270 310	restriction enzyme recognition sequences
+    T13	Entity 314 323	each end.
+    T14	Entity 329 337	the cDNA
+    T15	Event 341 349	inserted
+    E6	Event:T15 theme:T14 theme2:T16
+    T16	Entity 355 365	vector DNA
+    T17	Entity 35 43	the mRNA
+    T18	Entity 208 217	a library
+    s311.txt
+    T1	Event 30 42	transferring
+    E1	Event:T1 agent:T101
+    T101	Entity 43 79	pollen from anther  male flower part
+    s144.txt
+    T1	Event 26 36	converting
+    E1	Event:T1 agent:T101
+    T101	Entity 37 49	raw material
+    p53.txt
+    T1	Entity 3 10	E. coli
+    T2	Entity 12 37	a pilus of the donor cell
+    T3	Event 38 46	attaches
+    E1	Event:T3 agent:T2 theme:T4 location:T1 next-event:E2
+    T4	Entity 50 63	the recipient
+    T5	Entity 80 89	The pilus
+    T6	Event 95 103	retracts
+    E2	Event:T6 agent:T5 causes:E3
+    T7	Event 105 112	pulling
+    E3	Event:T7 theme:T8 next-event:E4 agent:T5
+    T8	Entity 113 126	the two cells
+    T9	Event 200 209	formation
+    E4	Event:T9 result:T10 location:T11 enables:E5
+    T10	Entity 213 240	a temporary "mating bridge"
+    T11	Entity 249 262	the two cells
+    T12	Event 292 300	transfer
+    E5	Event:T12 theme:T14 agent:T13 destination:T15
+    T13	Entity 278 287	the donor
+    T14	Entity 301 304	DNA
+    T15	Entity 308 321	the recipient
+    *	same-entity T2 T5
+    p144.txt
+    T1	Static-Event 164 174	variations
+    E1	Static-Event:T1 cotemporal:E2 agent:T5 location:T6 theme:T7 none:T15 none:T16 none:T17 none:T18 none:T19 none:T20
+    T2	Static-Event 233 239	better
+    E2	Static-Event:T2 causes:E3 agent:T8 theme:T9
+    T3	Event 276 283	produce
+    E3	Event:T3 causes:E4 agent:T10 result:T11 none:T21 none:T22
+    T4	Event 421 427	passed
+    E4	Event:T4 theme:T12 destination:T13 origin:T14 none:T23 none:T24 none:T25 none:T26 none:T27
+    T5	Entity 128 139	Individuals
+    T6	Entity 143 155	a population
+    T7	Entity 178 200	their heritable traits
+    T8	Entity 217 223	traits
+    T9	Entity 240 267	suited to their environment
+    T10	Entity 206 211	those
+    *	same-entity T5 T10
+    T11	Entity 284 298	more offspring
+    T12	Entity 407 414	alleles
+    T13	Entity 431 450	the next generation
+    T14	Entity 492 514	the present generation
+    T15	Entity 3 6	you
+    T16	Entity 15 25	Chapter 22
+    T17	Entity 27 43	Darwin's concept
+    T18	Entity 47 64	natural selection
+    T19	Entity 77 97	differential success
+    T20	Entity 101 126	survival and reproduction
+    T21	Entity 304 309	those
+    T22	Entity 315 321	traits
+    T23	Entity 354 367	genetic terms
+    T24	Entity 369 371	we
+    T25	Entity 386 395	selection
+    T26	Entity 454 465	proportions
+    T27	Entity 483 488	those
+    p59.txt
+    T2	Event 0 13	Transcription
+    E1	Event:T2 location:T3 same-event:E7 result:T4 next-event:E5 none:T21
+    T3	Entity 24 35	the nucleus
+    T4	Entity 41 45	mRNA
+    T5	Event 54 65	transported
+    E2	Event:T5 theme:T4 destination:T6 origin:T3 next-event:E3 same-event:E4
+    T6	Entity 69 82	the cytoplasm
+    T8	Event 90 101	translation
+    E3	Event:T8 location:T6 none:T22
+    T9	Entity 121 173	eukaryotic RNA transcripts from protein-coding genes
+    T11	Event 178 183	leave
+    E4	Event:T11 agent:T9 origin:T12
+    T12	Entity 184 195	the nucleus
+    T13	Entity 197 201	they
+    T14	Event 206 214	modified
+    E5	Event:T14 theme:T13 next-event:E4 same-event:E8 result:T16 none:T23
+    T16	Entity 242 268	the final, functional mRNA
+    *	same-entity T13 T9
+    T10	Event 274 287	transcription
+    E7	Event:T10 theme:T18 result:T19 next-event:E8 none:T24
+    T17	Entity 375 392	the finished mRNA
+    T18	Entity 291 323	a protein-coding eukaryotic gene
+    T19	Entity 335 343	pre-mRNA
+    T20	Event 357 367	processing
+    E8	Event:T20 result:T17 theme:T19 none:T25
+    *	same-entity T4 T16 T17
+    T21	Entity 0 13	Transcription
+    T22	Entity 90 101	translation
+    T23	Entity 218 230	various ways
+    T24	Entity 270 287	The transcription
+    T25	Entity 349 367	further processing
+    p94.txt
+    T1	Event 55 65	stimulates
+    E1	Event:T1 next-event:E3 agent:T5 theme:T6
+    T2	Event 96 106	activating
+    E2	Event:T2 causes:E1 agent:T5 theme:T7
+    T3	Event 181 186	added
+    E3	Event:T3 next-event:E4 theme:T9 theme2:T10
+    T4	Event 264 273	breakdown
+    E4	Event:T4 
+    T5	Entity 43 54	epinephrine
+    T6	Entity 66 84	glycogen breakdown
+    T7	Entity 107 125	a cytosolic enzyme
+    T8	Entity 127 149	glycogen phosphorylase
+    *	same-entity T7 T8
+    T9	Entity 165 176	epinephrine
+    *	same-entity T5 T9
+    T10	Entity 190 259	a test-tube mixture containing the enzyme and its substrate, glycogen
+    s493.txt
+    T1	Event 48 55	pulling
+    E1	Event:T1 result:T101 agent:T102
+    T101	Entity 82 105	their constituent parts
+    T102	Entity 56 76	apart macromolecules
+    s515.txt
+    T1	Event 26 34	dividing
+    E1	Event:T1 agent:T101
+    T101	Entity 35 57	a cell and its nucleus
+    p22.txt
+    T1	Event 29 48	gel electrophoresis
+    E1	Event:T1 agent:T2 theme:T3 next-event:E2 none:T11 none:T12
+    T2	Entity 16 18	we
+    T3	Entity 52 127	samples of mRNA from hummingbird embryos at different stages of development
+    T4	Event 129 137	transfer
+    E2	Event:T4 theme:T5 agent:T2 destination:T6 next-event:E4
+    T5	Entity 138 149	the samples
+    T6	Entity 153 178	a nitrocellulose membrane
+    T8	Entity 195 220	the mRNAs on the membrane
+    T9	Event 224 233	hybridize
+    E4	Event:T9 agent:T8 theme:T10
+    T10	Entity 239 283	a labeled probe recognizing beta-globin mRNA
+    *	same-entity T5 T3
+    T11	Entity 3 14	this method
+    T12	Entity 29 48	gel electrophoresis
+    p135.txt
+    Updated maxTokensPerProcess - /home/dick/srl/goto/lib/Dataset/train/p135.txt
+    T1	Event 831 838	process
+    E1	Event:T1 next-event:E2 super-event:E7 theme:T20 agent:T25 agent2:T23 agent3:T24
+    T2	Event 920 929	integrate
+    E2	Event:T2 theme:T21 agent:T23 agent2:T24 agent3:T25 result:T22
+    T3	Event 3 6	map
+    E3	Event:T3 theme:T8 location:T9
+    T4	Event 137 146	knock out
+    E4	Event:T4 agent:T10
+    T5	Event 148 155	disable
+    E5	Event:T5 same-event:E4 next-event:E6 theme:T11 result:T12
+    T6	Event 233 241	compared
+    E6	Event:T6 next-event:E7 theme:T15 theme2:T16 agent:T13
+    T7	Event 677 683	mapped
+    E7	Event:T7 same-event:E3 agent:T17 theme:T18 result:T19
+    T8	Entity 7 38	the protein interaction network
+    T9	Entity 42 76	the yeast Saccharomyces cerevisiae
+    T10	Entity 109 133	sophisticated techniques
+    T11	Entity 157 171	pairs of genes
+    T12	Entity 202 221	doubly mutant cells
+    T13	Entity 223 227	They
+    T14	Entity 92 103	researchers
+    *	same-entity T14 T13
+    T15	Entity 242 275	the fitness of each double mutant
+    T16	Entity 336 395	that predicted from the fitnesses of the two single mutants
+    T17	Entity 654 671	Computer software
+    T18	Entity 684 689	genes
+    T19	Entity 737 798	a network-like "functional map" of these genetic interactions
+    T20	Entity 839 915	the vast number of protein-protein interactions generated by this experiment
+    T21	Entity 930 934	them
+    *	same-entity T20 T21
+    T22	Entity 940 957	the completed map
+    T23	Entity 967 985	powerful computers
+    T24	Entity 987 1005	mathematical tools
+    T25	Entity 1011 1035	newly developed software
+    *	same-entity T19 T22
+    s655.txt
+    T1	Event 42 48	occurs
+    E1	Event:T1 raw-material:T101
+    T101	Entity 54 79	an adult female butterfly
+    s730.txt
+    T1	Event 0 16	seed germination
+    E1	Event:T1 raw-material:T101
+    T101	Entity 58 73	being moistened
+    No ENTITY match found for - being moistened:1
+    s97.txt
+    T1	Event 36 46	converting
+    E1	Event:T1 result:T101
+    T101	Entity 73 110	an inorganic form that plants can use
+    p70.txt
+    T1	Event 45 51	passed
+    E1	Event:T1 theme:T2 location:T3 location2:T4 next-event:E2 none:T14 none:T15 none:T16
+    T2	Entity 28 41	visible light
+    T3	Entity 60 72	the specimen
+    T4	Entity 90 102	glass lenses
+    T5	Event 115 129	refract (bend)
+    E2	Event:T5 agent:T6 theme:T7 next-event:E3 none:T17 none:T18
+    T6	Entity 104 114	The lenses
+    T7	Entity 130 139	the light
+    T8	Entity 159 184	the image of the specimen
+    T9	Event 188 197	magnified
+    E3	Event:T9 theme:T8 cotemporal:E4
+    T10	Entity 201 203	it
+    T11	Entity 222 229	the eye
+    T12	Entity 238 246	a camera
+    T13	Event 207 216	projected
+    E4	Event:T13 theme:T10 destination:T11 destination2:T12 none:T19
+    *	same-entity T6 T4
+    *	same-entity T10 T8
+    T14	Entity 3 21	a light microscope
+    T15	Entity 23 25	LM
+    T16	Entity 77 81	then
+    T17	Entity 124 128	bend
+    T18	Entity 143 153	such a way
+    T19	Entity 252 262	Appendix D
+    p50.txt
+    T1	Entity 5 28	oxygenic photosynthesis
+    T2	Event 35 42	evolved
+    E1	Event:T2 agent:T1 cotemporal:E2
+    T3	Entity 56 58	it
+    T4	Event 59 67	produced
+    E2	Event:T4 agent:T3 result:T5 next-event:E3
+    T5	Entity 44 55	the free O2
+    No ENTITY match found for - the free O2:2
+    *	same-entity T3 T1
+    T6	Event 77 86	dissolved
+    E3	Event:T6 agent:T5 location:T7 causes:E4
+    T7	Entity 90 111	the surrounding water
+    T8	Entity 118 120	it
+    *	same-entity T5 T8
+    T9	Static-Event 143 156	concentration
+    E4	Static-Event:T9 theme:T8 enables:E5
+    T11	Event 160 165	react
+    E5	Event:T11 agent:T8 theme:T12 causes:E6
+    T12	Entity 171 185	dissolved iron
+    T14	Event 222 233	precipitate
+    E6	Event:T14 agent:T15 result:T16 same-event:E12 next-event:E7
+    T15	Entity 210 218	the iron
+    T16	Entity 237 247	iron oxide
+    T17	Event 255 266	accumulated
+    E7	Event:T17 agent:T16 result:T18 next-event:E9
+    T18	Entity 270 279	sediments
+    T20	Entity 281 296	These sediments
+    T21	Event 302 312	compressed
+    E9	Event:T21 raw-material:T20 result:T22
+    *	same-entity T18 T20
+    T22	Entity 318 340	banded iron formations
+    T28	Entity 432 450	the dissolved iron
+    T29	Event 455 467	precipitated
+    E12	Event:T29 agent:T28 next-event:E13
+    T30	Entity 469 482	additional O2
+    T31	Event 483 492	dissolved
+    E13	Event:T31 agent:T30 location:T32 causes:E14
+    T32	Entity 496 505	the water
+    T33	Entity 512 530	the seas and lakes
+    T34	Static-Event 538 547	saturated
+    E14	Static-Event:T34 theme:T33 next-event:E15 agent:T10
+    T36	Event 602 611	"gas out"
+    E15	Event:T36 agent:T37 theme:T38 cotemporal:E16
+    T37	Entity 578 584	the O2
+    T38	Entity 615 624	the water
+    T39	Event 629 634	enter
+    E16	Event:T39 agent:T37 theme:T40
+    T40	Entity 635 649	the atmosphere
+    T10	Entity 553 555	O2
+    *	same-entity T10 T37
+    *	same-entity T12 T15 T28
+    s225.txt
+    T1	Event 41 51	transforms
+    E1	Event:T1 result:T101
+    T101	Entity 35 40	a gas
+    s406.txt
+    T1	Event 0 14	photosynthesis
+    E1	Event:T1 raw-material:T101 result:T102 agent:T103
+    T101	Entity 73 86	light photons
+    T102	Entity 122 137	chemical energy
+    T103	Entity 27 64	pigments , molecules in the plant cell
+    s292.txt
+    T1	Event 52 63	transformed
+    E1	Event:T1 result:T101
+    T101	Entity 69 105	water vapor , a gas in the atmosphere
+    s534.txt
+    Updated minTokensPerProcess - /home/dick/srl/goto/lib/Dataset/train/s534.txt
+    T1	Event 25 32	protect
+    E1	Event:T1 result:T101 agent:T102
+    T101	Entity 25 52	protect fish from predators
+    T102	Entity 33 37	fish
+    s606.txt
+    T1	Event 0 11	hibernation
+    E1	Event:T1 raw-material:T101 agent:T102
+    T101	Entity 51 74	under autumn conditions
+    T102	Entity 24 35	the insects
+    p121.txt
+    T1	Event 10 16	frozen
+    E1	Event:T1 next-event:E2 theme:T6
+    T2	Event 21 30	fractured
+    E2	Event:T2 next-event:E3 theme:T6 agent:T7
+    T3	Event 70 77	follows
+    E3	Event:T3 causes:E4 agent:T8 theme:T9
+    T4	Event 118 127	splitting
+    E4	Event:T4 next-event:E5 agent:T8 theme:T10 result:T11
+    T5	Event 202 206	goes
+    E5	Event:T5 agent:T12 destination:T13
+    T6	Entity 0 6	A cell
+    T7	Entity 36 43	a knife
+    T8	Entity 45 63	The fracture plane
+    T9	Entity 78 116	the hydrophobic interior of a membrane
+    T10	Entity 128 152	the phospholipid bilayer
+    T11	Entity 158 178	two separated layers
+    T12	Entity 180 201	Each membrane protein
+    T13	Entity 219 236	one of the layers
+    p107.txt
+    T1	Event 105 114	replicate
+    E1	Event:T1 agent:T2 location:T11 result:T13 super-event:E10 same-event:E3
+    T3	Event 241 250	replicate
+    E3	Event:T3 agent:T14 cotemporal:E4 same-event:E5 cotemporal2:E6
+    T4	Event 263 268	moves
+    E4	Event:T4 agent:T15 destination:T16 cotemporal:E6
+    T5	Event 353 364	replicating
+    E5	Event:T5 agent:T17 cotemporal:E6
+    T6	Event 375 384	elongates
+    E6	Event:T6 agent:T18 next-event:E7
+    T7	Static-Event 451 473	twice its initial size
+    E7	Static-Event:T7 agent:T19 next-event:E8
+    T8	Event 495 502	pinches
+    E8	Event:T8 agent:T20 causes:E9
+    T9	Event 511 519	dividing
+    E9	Event:T9 raw-material:T21 result:T22 agent:T20
+    T10	Event 27 40	cell division
+    E10	Event:T10 
+    T2	Entity 59 94	the DNA of the bacterial chromosome
+    T11	Entity 118 152	a specific place on the chromosome
+    T12	Entity 164 185	origin of replication
+    *	same-entity T11 T12
+    T13	Entity 197 208	two origins
+    T14	Entity 213 227	the chromosome
+    T15	Entity 252 262	one origin
+    T16	Entity 284 312	the opposite end of the cell
+    T17	Entity 335 349	the chromosome
+    T18	Entity 366 374	the cell
+    *	same-entity T14 T17
+    T19	Entity 419 432	the bacterium
+    T20	Entity 475 494	its plasma membrane
+    T21	Entity 520 543	the parent E. coli cell
+    T22	Entity 549 567	two daughter cells
+    p20.txt
+    T1	Event 0 8	Analysis
+    E1	Event:T1 theme:T9 none:T11
+    T2	Event 112 121	isolation
+    E2	Event:T2 super-event:E1 next-event:E3 theme:T4 none:T12 none:T13
+    T4	Entity 125 189	mRNAs from different developmental stages of hummingbird embryos
+    T3	Event 216 221	added
+    E3	Event:T3 result:T6 raw-material:T5 next-event:E4
+    T5	Entity 191 212	Reverse transcriptase
+    T6	Entity 235 239	cDNA
+    T7	Event 252 258	serves
+    E4	Event:T7 agent:T6 raw-material:T8 theme:T10
+    T8	Entity 301 334	primers from the beta-globin gene
+    T9	Entity 12 63	hummingbird beta-globin gene expression with RT-PCR
+    T10	Entity 262 294	a template for PCR amplification
+    T11	Entity 0 8	Analysis
+    T12	Entity 84 101	Northern blotting
+    T13	Entity 108 121	the isolation
+    s75.txt
+    T1	Event 33 43	converting
+    E1	Event:T1 result:T101
+    T101	Entity 63 80	harmless nitrogen
+    p126.txt
+    T1	Event 224 231	wearing
+    E1	Event:T1 cotemporal:E2 agent:T5 theme:T6 result:T7 none:T14 none:T15
+    T2	Event 323 329	eroded
+    E2	Event:T2 next-event:E3 theme:T9 origin:T10
+    T3	Event 349 356	carried
+    E3	Event:T3 next-event:E4 theme:T9 agent:T11 destination:T12
+    T4	Event 390 396	buried
+    E4	Event:T4 agent:T9 theme:T13 result:T8 none:T16
+    T5	Entity 217 223	rivers
+    T6	Entity 240 245	rocks
+    T7	Entity 188 195	valleys
+    T8	Entity 255 286	rocks containing marine fossils
+    T9	Entity 304 313	sediments
+    T10	Entity 335 343	the land
+    T11	Entity 360 366	rivers
+    T12	Entity 370 377	the sea
+    T13	Entity 397 417	dead marine organism
+    T14	Entity 161 168	example
+    T15	Entity 170 172	he
+    T16	Entity 385 389	they
+    s748.txt
+    T1	Event 26 35	producing
+    E1	Event:T1 result:T101
+    T101	Entity 36 43	gametes
+    p47.txt
+    T2	Event 41 61	sympatric speciation
+    E1	Event:T2  none:T5 none:T6 none:T7
+    T4	Entity 77 86	gene flow
+    T3	Event 129 136	blocked
+    E2	Event:T3 causes:E1 theme:T4 origin:T1 destination:T1
+    T1	Entity 99 125	the isolated subpopulation
+    T5	Entity 7 12	rarer
+    No ENTITY match found for - rarer:3
+    T6	Entity 18 39	allopatric speciation
+    T7	Entity 41 61	sympatric speciation
+    p127.txt
+    T1	Event 453 460	descent
+    E1	Event:T1 causes:E2
+    T2	Static-Event 506 515	diversity
+    E2	Static-Event:T2 theme:T14 time:T15
+    T3	Event 259 264	lived
+    E3	Event:T3 cotemporal:E4 agent:T6 location:T7 time:T8
+    T4	Event 314 325	accumulated
+    E4	Event:T4 causes:E5 agent:T9 theme:T10
+    T5	Event 370 373	fit
+    E5	Event:T5 super-event:E1 agent:T11 theme:T12 theme2:T13
+    T6	Entity 216 258	the descendants of that ancestral organism
+    T7	Entity 268 284	various habitats
+    T8	Entity 290 307	millions of years
+    T9	Entity 309 313	they
+    *	same-entity T9 T6 T12
+    T10	Entity 326 347	diverse modifications
+    T11	Entity 352 363	adaptations
+    *	same-entity T10 T11
+    T12	Entity 374 378	them
+    T13	Entity 382 403	specific ways of life
+    T14	Entity 519 523	life
+    T15	Entity 531 536	today
+    p31.txt
+    T1	Entity 16 33	RNA polymerase II
+    T2	Event 34 45	transcribes
+    E1	Event:T2 agent:T1 theme:T3 next-event:E3 none:T15 none:T16 none:T17 none:T18 none:T19
+    T3	Entity 46 67	a sequence on the DNA
+    T6	Entity 188 253	a point about 10-35 nucleotides downstream from the AAUAAA signal
+    T7	Entity 255 306	proteins associated with the growing RNA transcript
+    T8	Event 307 310	cut
+    E3	Event:T8 agent:T7 location:T6 causes:E4 theme:T13
+    T9	Event 340 349	releasing
+    E4	Event:T9 theme:T10 next-event:E5 none:T20
+    T10	Entity 350 362	the pre-mRNA
+    T11	Event 392 402	processing
+    E5	Event:T11 theme:T12 none:T21 none:T22 none:T23
+    T12	Entity 364 376	The pre-mRNA
+    *	same-entity T10 T12
+    T13	Entity 311 313	it
+    T14	Entity 75 110	the polyadenylation signal sequence
+    *	same-entity T3 T14
+    T15	Entity 4 14	eukaryotes
+    T16	Entity 75 110	the polyadenylation signal sequence
+    T17	Entity 128 145	a polyadenylation
+    T18	Entity 153 161	(AAUAAA)
+    No ENTITY match found for - -LRB- AAUAAA -RRB-:4
+    T19	Entity 165 177	the pre-mRNA
+    T20	Entity 324 338	the polymerase
+    T21	Entity 392 402	processing
+    T22	Entity 404 413	the topic
+    T23	Entity 417 433	the next section
+    p3.txt
+    T1	Event 44 57	crossing over
+    E1	Event:T1 cotemporal:E2 causes:E3 location:T10 none:T13 none:T14
+    T2	Event 79 87	cohesion
+    E2	Event:T2 causes:E3 location:T10 theme:T12
+    T3	Event 118 127	formation
+    E3	Event:T3 result:T4 next-event:E4 none:T15
+    T4	Entity 131 140	a chiasma
+    T5	Entity 142 151	Chiasmata
+    *	same-entity T4 T5
+    T6	Event 152 156	hold
+    E4	Event:T6 agent:T5 cotemporal:E5 theme:T11
+    T7	Event 190 195	forms
+    E5	Event:T7 agent:T8 super-event:E6
+    T8	Entity 178 189	the spindle
+    T9	Event 210 226	meiotic division
+    E6	Event:T9  none:T16
+    T10	Entity 88 102	along the arms
+    T11	Entity 157 165	homologs
+    T12	Entity 62 78	sister chromatid
+    T13	Entity 12 23	Figure 13.8
+    T14	Entity 25 40	the combination
+    T15	Entity 114 127	the formation
+    T16	Entity 200 226	the first meiotic division
+    s661.txt
+    T1	Event 55 64	converted
+    E1	Event:T1 result:T101
+    T101	Entity 70 77	biomass
+    p10.txt

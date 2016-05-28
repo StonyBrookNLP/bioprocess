@@ -1,0 +1,201 @@
+main() {
+  Execution directory: state/execs/72.exec
+  main {
+    Running SRL
+    Reading data {
+      s97.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/s97.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s97.txt
+      T1	Event 36 46	converting
+      E1	Event:T1 result:T101
+      T101	Entity 73 110	an inorganic form that plants can use
+      s75.txt
+      Updated minSentencesPerProcess - lib/Dataset/train/s75.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s75.txt
+      T1	Event 33 43	converting
+      E1	Event:T1 result:T101
+      T101	Entity 63 80	harmless nitrogen
+      s17.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s17.txt
+      T1	Event 26 36	converting
+      E1	Event:T1 agent:T101
+      T101	Entity 37 44	a solid
+      s70.txt
+      T1	Event 29 36	burning
+      E1	Event:T1 agent:T101
+      T101	Entity 37 56	an organic compound
+      s90.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s90.txt
+      T1	Event 28 40	transporting
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 113 127	carbon dioxide
+      T102	Entity 73 81	the body
+      s81.txt
+      T1	Event 0 10	combustion
+      E1	Event:T1 raw-material:T101 agent:T102
+      T101	Entity 97 103	oxygen
+      T102	Entity 23 84	fossil fuels , such as natural gas , fuel oil , coal or gasoline
+      s57.txt
+      T1	Event 32 39	produce
+      E1	Event:T1 result:T101
+      T101	Entity 32 71	produce heat which is radiated from the
+      s84.txt
+      T1	Event 91 98	develop
+      E1	Event:T1 agent:T101
+      T101	Entity 72 90	many other insects
+      s88.txt
+      T1	Event 49 54	turns
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 60 72	water vapour
+      T102	Entity 36 48	liquid water
+      s26.txt
+      T1	Event 46 53	divides
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 59 77	two daughter cells
+      T102	Entity 32 45	a single cell
+      s16.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s16.txt
+      T1	Event 0 11	evaporation
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 55 67	water vapour
+      T102	Entity 24 36	liquid water
+      s51.txt
+      T1	Event 30 40	vaporizing
+      E1	Event:T1 agent:T101
+      T101	Entity 41 50	the water
+    } [2.9s, cum. 19s]
+    [7, 6, 9, 8, 5, 1, 3, 2, 10, 4, 0, 11]
+    Iteration 1 {
+      Example s84 {
+        complete metamorphosis is the way butterflies, bees, flies, beetles and many other insects develop.
+        ------------------Event: develop--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ many) (JJ other) (NNS insects)):Agent
+        ---------PREDICTIONS-------------------------
+        butterflies                    [5 5], Gold:  NONE Predicted: Agent
+        bees                           [7 7], Gold:  NONE Predicted: Agent
+        flies                          [9 9], Gold:  NONE Predicted: Agent
+        beetles                        [11 11], Gold:  NONE Predicted: Agent
+        many other insects             [13 15], Gold:  Agent Predicted: Agent
+        ------------------------------------------
+      }
+      Example s57 {
+        the purpose of combustion is to produce heat which is radiated from the...
+        ------------------Event: produce--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (NP (NN heat)) (SBAR (WHNP (WDT which)) (S (VP (VBZ is) (VP (VBN radiated) (PP (IN from) (NP (DT the)))))))):Result
+        ---------PREDICTIONS-------------------------
+        heat which is radiated from the [7 12], Gold:  Result Predicted: NONE
+        heat                           [7 7], Gold:  NONE Predicted: Agent
+        ------------------------------------------
+      }
+    } [3m49s, cum. 4m9s]
+    Iteration 2 {
+      Example s26 {
+        mitosis is the process by which a single cell divides into two daughter cells.
+        ------------------Event: divides--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT a) (JJ single) (NN cell)):Agent
+        (NP (CD two) (NN daughter) (NNS cells)):Result
+        ---------PREDICTIONS-------------------------
+        a single cell                  [6 8], Gold:  Agent Predicted: NONE
+        two daughter cells             [11 13], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      }
+      Example s88 {
+        evaporation is the process by which liquid water turns into water vapour through...
+        ------------------Event: turns--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ liquid) (NN water)):Agent
+        (NP (NN water) (NN vapor)):Result
+        ---------PREDICTIONS-------------------------
+        liquid water                   [6 7], Gold:  Agent Predicted: NONE
+        water vapor                    [10 11], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      }
+    }
+    Iteration 3 {
+      Example s81 {
+        combustion occurs when fossil fuels, such as natural gas, fuel oil, coal or gasoline, react with oxygen.
+        ------------------Event: combustion--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (NP (JJ fossil) (NNS fuels)) (, ,) (PP (JJ such) (IN as) (NP (NP (JJ natural) (NN gas)) (, ,) (NP (NN fuel) (NN oil)) (, ,) (NP (NN coal)) (CC or) (NP (NN gasoline)))) (, ,)):Agent
+        (NP (NN oxygen)):RawMaterial
+        ---------PREDICTIONS-------------------------
+        fossil fuels , such as natural gas , fuel oil , coal or gasoline , [3 17], Gold:  Agent Predicted: NONE
+        oxygen                         [20 20], Gold:  RawMaterial Predicted: NONE
+        ------------------------------------------
+      }
+      Example s75 {
+        nitrogen cycle is the process of converting toxic ammonia into harmless nitrogen, by different types of bacteria.
+        ------------------Event: converting--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ harmless) (NN nitrogen)):Result
+        ---------PREDICTIONS-------------------------
+        toxic ammonia                  [7 8], Gold:  NONE Predicted: Agent
+        harmless nitrogen              [10 11], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      }
+    } [1.0s, cum. 4m11s]
+    Iteration 4 {
+      Example s70 {
+        combustion is the process of burning an organic compound in oxygen to produce...
+        ------------------Event: burning--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT an) (JJ organic) (NN compound)):Agent
+        ---------PREDICTIONS-------------------------
+        an organic compound            [6 8], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+      Example s17 {
+        melting is the process of converting a solid into a liquid.
+        ------------------Event: converting--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT a) (JJ solid)):Agent
+        ---------PREDICTIONS-------------------------
+        a solid                        [6 7], Gold:  Agent Predicted: NONE
+        ------------------------------------------
+      }
+    } [37s, cum. 4m48s]
+    Iteration 5 {
+      Example s16 {
+        evaporation occurs when liquid water is converted into water vapour.
+        ------------------Event: evaporation--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (JJ liquid) (NN water)):Agent
+        (NP (NN water) (NN vapor)):Result
+        ---------PREDICTIONS-------------------------
+        liquid water                   [3 4], Gold:  Agent Predicted: NONE
+        water vapor                    [8 9], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      }
+      Example s90 {
+        breathing is the process of transporting oxygen from the atmosphere into the body and the process of eliminating carbon dioxide from the body.
+        ------------------Event: transporting--------------
+        
+        ---------GOLD ENTITIES-------------------------
+        (NP (DT the) (NN body)):Agent
+        (NP (NN carbon) (NN dioxide)):Result
+        ---------PREDICTIONS-------------------------
+        the body                       [11 12], Gold:  Agent Predicted: NONE
+        carbon dioxide                 [18 19], Gold:  Result Predicted: NONE
+        ------------------------------------------
+      }
+    }
+    
+    ------------------------------------------Dev-------------------------------------------
+    Precision 0.167 NaN 0.000 NaN NaN NaN
+    Recall    0.500 0.000 0.000 0.000 0.000 0.100
+    F1        0.250 NaN NaN NaN NaN NaN
+  } [4m48s, cum. 4m49s]
+  Execution directory: state/execs/72.exec
+} [4m49s]

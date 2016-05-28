@@ -1,0 +1,93 @@
+main() {
+  Execution directory: state/execs/53.exec
+  main {
+    Running SRL
+    Reading data {
+      s587.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/s587.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/s587.txt
+      T1	Event 46 52	travel
+      E1	Event:T1 agent:T101
+      T101	Entity 34 45	light waves
+      s258.txt
+      Updated minSentencesPerProcess - lib/Dataset/train/s258.txt
+      Updated minTokensPerProcess - lib/Dataset/train/s258.txt
+      T1	Event 40 53	breaking down
+      E1	Event:T1 result:T101 agent:T102
+      T101	Entity 62 84	into smaller fragments
+      T102	Entity 54 61	bedrock
+      p77.txt
+      Updated maxSentencesPerProcess - lib/Dataset/train/p77.txt
+      Updated maxTokensPerProcess - lib/Dataset/train/p77.txt
+      T1	Event 29 39	glycolysis
+      E1	Event:T1 
+      T2	Event 72 89	energy investment
+      E2	Event:T2 super-event:E1 same-event:E4
+      T3	Event 94 107	energy payoff
+      E3	Event:T3 super-event:E1 same-event:E6
+      T4	Event 120 143	energy investment phase
+      E4	Event:T4 
+      T5	Event 163 169	spends
+      E5	Event:T5 agent:T6 theme:T7 super-event:E4
+      T6	Entity 145 153	the cell
+      T7	Entity 170 173	ATP
+      T8	Event 226 245	energy payoff phase
+      E6	Event:T8 
+      T9	Event 259 267	produced
+      E7	Event:T9 result:T11 agent:T10 super-event:E6 cotemporal:E8
+      T10	Entity 271 302	substrate-level phosphorylation
+      T11	Entity 252 255	ATP
+      T12	Event 315 322	reduced
+      E8	Event:T12 super-event:E6 raw-material:T13 result:T14 agent:T15
+      T13	Entity 307 311	NAD+
+      T14	Entity 326 330	NADH
+      T15	Entity 334 382	electrons released from the oxidation of glucose
+      p12.txt
+      T1	Event 24 37	genetic drift
+      E1	Event:T1 time:T6 causes:E3 causes2:E4 none:T9 none:T10
+      T6	Entity 45 59	the bottleneck
+      T2	Event 78 82	loss
+      E3	Event:T2 theme:T8 cotemporal:E4 none:T11
+      T3	Event 111 119	increase
+      E4	Event:T3 theme:T7 none:T12
+      T7	Entity 123 155	the frequency of harmful alleles
+      T8	Entity 86 103	genetic variation
+      T10	Entity 24 37	genetic drift
+      T11	Entity 76 82	a loss
+      T12	Entity 108 119	an increase
+      T9	Entity 0 10	These data
+      p19.txt
+      T1	Event 10 31	enzymatic degradation
+      E1	Event:T1 next-event:E2 theme:T17
+      T2	Entity 45 92	a second DNA strand, complementary to the first
+      T3	Event 97 108	synthesized
+      E2	Event:T3 agent:T4 result:T5 result2:T2 next-event:E4
+      T4	Entity 112 126	DNA polymerase
+      T5	Entity 142 161	double-stranded DNA
+      T6	Entity 172 196	complementary DNA (cDNA)
+      *	same-entity T5 T6 T7 T14
+      T7	Entity 251 259	the cDNA
+      T8	Event 244 250	modify
+      E3	Event:T8 agent:T9 theme:T7 super-event:E4 cotemporal:E5
+      T9	Entity 219 234	the researchers
+      T10	Event 201 207	create
+      E4	Event:T10 result:T18
+      T11	Event 263 269	adding
+      E5	Event:T11 raw-material:T12 location:T13 next-event:E6 agent:T9 theme:T7
+      T12	Entity 270 310	restriction enzyme recognition sequences
+      T13	Entity 314 323	each end.
+      T14	Entity 329 337	the cDNA
+      T15	Event 341 349	inserted
+      E6	Event:T15 theme:T14 theme2:T16
+      T16	Entity 355 365	vector DNA
+      T17	Entity 35 43	the mRNA
+      T18	Entity 208 217	a library
+      s311.txt
+      T1	Event 30 42	transferring
+      E1	Event:T1 agent:T101
+      T101	Entity 43 79	pollen from anther  male flower part
+      s144.txt
+      T1	Event 26 36	converting
+      E1	Event:T1 agent:T101
+      T101	Entity 37 49	raw material
+      p53.txt

@@ -1,0 +1,7 @@
+exec.status	exception
+exec.disk	200K
+log.note	
+exec.memory	1.4G
+exec.time	3m56s
+exec.errors	2
+exec.warnings	0
