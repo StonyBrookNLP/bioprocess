@@ -1,6 +1,0 @@
-main() {
-  Execution directory: state/execs/17.exec
-  Reading data {
-    s97.txt
-    Exception - /home/dick/srl/goto/lib/Dataset/trains97.txt (No such file or directory)
-  }

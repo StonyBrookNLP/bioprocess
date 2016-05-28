@@ -1,7 +1,0 @@
-log.note	
-exec.memory	1.1G
-exec.time	8m3s
-exec.errors	0
-exec.warnings	0
-exec.status	exception
-exec.disk	200K
